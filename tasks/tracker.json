@@ -1,0 +1,106 @@
+{
+  "last_updated": "2026-03-04T14:29:47.417Z",
+  "total_tasks": 10,
+  "tasks": [
+    {
+      "task_id": "TASK-1",
+      "account_id": "ben_s_electric_solutions",
+      "account_name": "Ben's Electric Solutions",
+      "type": "Demo Processing",
+      "status": "completed",
+      "version": "v1",
+      "completed_at": "2026-03-04T14:26:16.346Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\ben_s_electric_solutions\\v1"
+    },
+    {
+      "task_id": "TASK-2",
+      "account_id": "coastal_alarm_systems",
+      "account_name": "Coastal Alarm Systems",
+      "type": "Demo Processing",
+      "status": "completed",
+      "version": "v1",
+      "completed_at": "2026-03-04T14:26:38.056Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\coastal_alarm_systems\\v1"
+    },
+    {
+      "task_id": "TASK-3",
+      "account_id": "evergreen_mechanical_services",
+      "account_name": "Evergreen Mechanical Services",
+      "type": "Demo Processing",
+      "status": "completed",
+      "version": "v1",
+      "completed_at": "2026-03-04T14:27:03.114Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\evergreen_mechanical_services\\v1"
+    },
+    {
+      "task_id": "TASK-4",
+      "account_id": "patriot_fire_protection",
+      "account_name": "Patriot Fire Protection",
+      "type": "Demo Processing",
+      "status": "completed",
+      "version": "v1",
+      "completed_at": "2026-03-04T14:27:22.574Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\patriot_fire_protection\\v1"
+    },
+    {
+      "task_id": "TASK-5",
+      "account_id": "summit_hvac_solutions",
+      "account_name": "Summit HVAC Solutions",
+      "type": "Demo Processing",
+      "status": "completed",
+      "version": "v1",
+      "completed_at": "2026-03-04T14:27:41.000Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\summit_hvac_solutions\\v1"
+    },
+    {
+      "task_id": "TASK-6",
+      "account_id": "ben_s_electric_solutions",
+      "account_name": "Ben's Electric Solutions",
+      "type": "Onboarding Update",
+      "status": "completed",
+      "version": "v2",
+      "completed_at": "2026-03-04T14:28:08.779Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\ben_s_electric_solutions\\v2"
+    },
+    {
+      "task_id": "TASK-7",
+      "account_id": "coastal_alarm_systems",
+      "account_name": "Coastal Alarm Systems",
+      "type": "Onboarding Update",
+      "status": "completed",
+      "version": "v2",
+      "completed_at": "2026-03-04T14:28:28.620Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\coastal_alarm_systems\\v2"
+    },
+    {
+      "task_id": "TASK-8",
+      "account_id": "evergreen_mechanical_services",
+      "account_name": "Evergreen Mechanical Services",
+      "type": "Onboarding Update",
+      "status": "completed",
+      "version": "v2",
+      "completed_at": "2026-03-04T14:28:56.487Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\evergreen_mechanical_services\\v2"
+    },
+    {
+      "task_id": "TASK-9",
+      "account_id": "patriot_fire_protection",
+      "account_name": "Patriot Fire Protection",
+      "type": "Onboarding Update",
+      "status": "completed",
+      "version": "v2",
+      "completed_at": "2026-03-04T14:29:17.303Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\patriot_fire_protection\\v2"
+    },
+    {
+      "task_id": "TASK-10",
+      "account_id": "summit_hvac_solutions",
+      "account_name": "Summit HVAC Solutions",
+      "type": "Onboarding Update",
+      "status": "completed",
+      "version": "v2",
+      "completed_at": "2026-03-04T14:29:47.415Z",
+      "output_location": "C:\\Users\\Admin\\.gemini\\antigravity\\scratch\\clara-ai-pipeline\\outputs\\accounts\\summit_hvac_solutions\\v2"
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "account_id": "summit_hvac_solutions",
+  "company_name": "Summit HVAC Solutions",
+  "extraction_date": "2024-11-20",
+  "extraction_type": "onboarding_update",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start_time": "06:00",
+    "end_time": "18:00",
+    "timezone": "America/Phoenix",
+    "seasonal_hours": "Saturdays: 7 AM to 2 PM from April through September. Closed Saturdays from October through March.",
+    "holiday_policy": "Closed on all major holidays (New Year's, Memorial Day, July 4th, Labor Day, Thanksgiving, Christmas). Rick takes emergency calls on holidays for existing customers."
+  },
+  "office_address": "3401 East McDowell Road, Suite 180, Phoenix, Arizona 85008",
+  "timezone": "America/Phoenix",
+  "contact_info": [
+    {
+      "name": "Karen",
+      "role": "Office Manager",
+      "phone": null,
+      "email": null,
+      "context": "Manages the office for Summit HVAC Solutions and handles non-emergency after-hours follow-ups."
+    },
+    {
+      "name": "Rick",
+      "role": "Owner",
+      "phone": "602-555-0156",
+      "email": null,
+      "context": "Owner of Summit HVAC Solutions, handles primary after-hours emergency calls."
+    },
+    {
+      "name": "Danny",
+      "role": "Senior Tech",
+      "phone": "602-555-0178",
+      "email": null,
+      "context": "Senior technician, serves as backup for after-hours emergency calls."
+    },
+    {
+      "name": "Karen Wheeler",
+      "role": "Office Manager",
+      "phone": "602-555-0134",
+      "email": null,
+      "context": "Handles all dispatch for existing customers with service issues during business hours."
+    },
+    {
+      "name": "Rick",
+      "role": "Owner",
+      "phone": "602-555-0156",
+      "email": null,
+      "context": "First contact for emergency routing after hours and on holidays for existing customers. Also handles specific requests during business hours."
+    },
+    {
+      "name": "Danny",
+      "role": "Senior Tech",
+      "phone": "602-555-0178",
+      "email": null,
+      "context": "Second contact in the emergency routing escalation chain after hours."
+    },
+    {
+      "name": null,
+      "role": "Office",
+      "phone": null,
+      "email": "office@summithvacaz.com",
+      "context": "General office email."
+    }
+  ],
+  "services_supported": [
+    "Commercial AC installation",
+    "Commercial AC repair",
+    "Residential AC installation",
+    "Residential AC repair",
+    "Heating system installation",
+    "Heating system repair",
+    "Ductwork installation",
+    "Ductwork cleaning",
+    "Thermostat and control systems",
+    "Preventive maintenance contracts",
+    "Indoor air quality services",
+    "Mini-split installations",
+    "Commercial AC installation and repair",
+    "Residential AC installation and repair",
+    "Commercial and residential heating installation and repair",
+    "Ductwork installation and cleaning",
+    "Thermostat and smart control system installation",
+    "Preventive maintenance contracts (Cool Club)",
+    "Indoor air quality services (air purification, humidity control)",
+    "Mini-split system installation",
+    "Rooftop unit service for commercial buildings",
+    "Refrigeration system repair for restaurants and commercial kitchens"
+  ],
+  "services_excluded": [
+    "Window AC units",
+    "Plumbing beyond what's needed for HVAC",
+    "Electrical beyond what's needed for HVAC",
+    "Evaporative coolers",
+    "Duct cleaning for dryer vents"
+  ],
+  "emergency_definition": [
+    "Complete AC failure at any commercial property (restaurants, medical offices, schools, data centers)",
+    "Gas leaks or suspected gas leaks related to heating equipment",
+    "Carbon monoxide detector alerts related to HVAC systems",
+    "Refrigerant leaks",
+    "No-heat situations when outdoor temperature is below 40 degrees"
+  ],
+  "emergency_routing_rules": {
+    "escalation_chain": [
+      {
+        "tier": 1,
+        "name": "Rick",
+        "phone": "602-555-0156"
+      },
+      {
+        "tier": 2,
+        "name": "Danny",
+        "phone": "602-555-0178"
+      }
+    ],
+    "order": [
+      "transfer to Rick",
+      "transfer to Danny",
+      "take detailed message"
+    ],
+    "timeout_seconds": 60,
+    "fallback_action": "Take a detailed message including name, business name, phone, address, exact system issue, and current temperature situation. Promise callback within 20 minutes."
+  },
+  "non_emergency_routing_rules": {
+    "action": "Clara to answer calls, collect caller information, and inform them of callback.",
+    "info_to_collect": [
+      "name",
+      "phone_number",
+      "service_type",
+      "address",
+      "existing_customer_status"
+    ],
+    "callback_timeframe": "First thing next business day.",
+    "notes": "Existing customers receive priority callbacks."
+  },
+  "call_transfer_rules": {
+    "during_hours_transfer": "Karen Wheeler (602-555-0134) for existing customers with service issues; Rick's cell (602-555-0156) for specific requests for Rick.",
+    "transfer_timeout_seconds": 30,
+    "transfer_fail_action": "Take a message.",
+    "notes": []
+  },
+  "integration_constraints": [
+    "Clara does not need to integrate with Housecall Pro for scheduling."
+  ],
+  "after_hours_flow_summary": "During after-hours, Clara will answer calls. If the call is identified as an emergency based on predefined criteria (e.g., complete AC failure at commercial property, gas leaks, CO alerts, refrigerant leaks, no-heat below 40 degrees), Clara will first attempt to transfer to Rick (602-555-0156) for 60 seconds. If Rick does not answer, Clara will then attempt to transfer to Danny (602-555-0178). If Danny also does not answer, Clara will take a detailed message, collecting the caller's name, business name, phone, address, the exact system issue, and the current temperature situation, promising a callback within 20 minutes. For non-emergency calls after hours, Clara will take a standard message, collecting the caller's name, phone number, type of service needed, address, and whether they are an existing customer. Existing customers will be flagged for priority callbacks. Callers will be informed that they will receive a callback first thing on the next business day. On major holidays, Rick will take emergency calls specifically for existing customers.",
+  "office_hours_flow_summary": "During business hours, Clara will answer all incoming calls and qualify the caller's intent. For existing customers calling with service issues, Clara will attempt to transfer the call directly to Karen Wheeler (602-555-0134), who handles all dispatch. For new customers inquiring about quotes, Clara will collect their contact information and details about their service needs, and Karen will call them back. If a caller specifically asks to speak with Rick, Clara will attempt to transfer the call to Rick's cell phone (602-555-0156). If Rick does not answer within 30 seconds, Clara will take a detailed message. Special rules apply: during the summer months (June, July, August), Clara must never promise same-day service for non-emergencies, instead stating that scheduling will occur 'as soon as possible.' Cool Club members should be identified and flagged as a priority. In the event a caller mentions a gas smell, Clara must immediately instruct them to leave the property, call 911 first, and then call Summit HVAC.",
+  "special_rules": [
+    "Never promise same-day service for non-emergencies during summer (June, July, August); Clara should state scheduling will be 'as soon as possible'.",
+    "Cool Club members should be flagged as priority.",
+    "If a gas smell is mentioned, immediately instruct the caller to leave the property, call 911 first, then call Summit HVAC.",
+    "Rick takes emergency calls on holidays for existing customers.",
+    "Summit HVAC Solutions is licensed in Arizona and Nevada."
+  ],
+  "questions_or_unknowns": [],
+  "notes": "Updated with onboarding data. Operational details confirmed.",
+  "version": "v2",
+  "v1_date": "2024-11-20",
+  "v2_date": "2024-11-23"
+}

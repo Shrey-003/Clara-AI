@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara AI Pipeline Dashboard</title>
+    <meta name="description"
+        content="Dashboard for Clara AI Zero-Cost Automation Pipeline - View accounts, agent specs, and diffs">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">✦</span>
+                    <span class="logo-text">Clara AI</span>
+                </div>
+                <span class="badge">Pipeline Dashboard</span>
+            </div>
+            <div class="header-right">
+                <div class="run-status" id="runStatus">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Loading...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Metrics Bar -->
+        <div class="metrics-bar" id="metricsBar">
+            <div class="metric">
+                <span class="metric-value" id="totalAccounts">-</span>
+                <span class="metric-label">Accounts</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value" id="v1Count">-</span>
+                <span class="metric-label">v1 Generated</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value" id="v2Count">-</span>
+                <span class="metric-label">v2 Updated</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value" id="totalChanges">-</span>
+                <span class="metric-label">Total Changes</span>
+            </div>
+            <div class="metric">
+                <span class="metric-value" id="pipelineDuration">-</span>
+                <span class="metric-label">Run Time</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Account List -->
+            <nav class="sidebar" id="accountList">
+                <h3>Accounts</h3>
+                <div class="account-cards" id="accountCards"></div>
+            </nav>
+
+            <!-- Content Area -->
+            <div class="content" id="contentArea">
+                <div class="welcome-state">
+                    <div class="welcome-icon">📋</div>
+                    <h2>Select an Account</h2>
+                    <p>Choose an account from the sidebar to view its extracted data, agent spec, and changelog.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+{
+  "account_id": "summit_hvac_solutions",
+  "company_name": "Summit HVAC Solutions",
+  "extraction_date": "2024-11-20",
+  "extraction_type": "demo",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "start_time": "6 AM",
+    "end_time": "6 PM",
+    "timezone": "Mountain Time",
+    "seasonal_hours": "Saturdays are 7 AM to 2 PM, April through September.",
+    "holiday_policy": null
+  },
+  "office_address": "3401 East McDowell Road, Suite 180, Phoenix, Arizona 85008",
+  "timezone": "Mountain Time",
+  "contact_info": [
+    {
+      "name": "Karen",
+      "role": "Office Manager",
+      "phone": null,
+      "email": null,
+      "context": "Manages the office for Summit HVAC Solutions and handles non-emergency after-hours follow-ups."
+    },
+    {
+      "name": "Rick",
+      "role": "Owner",
+      "phone": "602-555-0156",
+      "email": null,
+      "context": "Owner of Summit HVAC Solutions, handles primary after-hours emergency calls."
+    },
+    {
+      "name": "Danny",
+      "role": "Senior Tech",
+      "phone": "602-555-0178",
+      "email": null,
+      "context": "Senior technician, serves as backup for after-hours emergency calls."
+    }
+  ],
+  "services_supported": [
+    "Commercial AC installation",
+    "Commercial AC repair",
+    "Residential AC installation",
+    "Residential AC repair",
+    "Heating system installation",
+    "Heating system repair",
+    "Ductwork installation",
+    "Ductwork cleaning",
+    "Thermostat and control systems",
+    "Preventive maintenance contracts",
+    "Indoor air quality services",
+    "Mini-split installations"
+  ],
+  "services_excluded": [],
+  "emergency_definition": [
+    "Complete AC failure in a commercial building (restaurant, school, medical facility)",
+    "Gas leak situation",
+    "Refrigerant leaks",
+    "Carbon monoxide detector alerts related to HVAC",
+    "Anything affecting health and safety",
+    "Anything causing major business disruption"
+  ],
+  "emergency_routing_rules": {
+    "escalation_chain": [
+      {
+        "tier": 1,
+        "name": "Rick",
+        "phone": "602-555-0156"
+      },
+      {
+        "tier": 2,
+        "name": "Danny",
+        "phone": "602-555-0178"
+      }
+    ],
+    "order": [
+      "Clara to identify emergency, then transfer to Rick's cell phone.",
+      "If Rick does not answer, transfer to Danny's cell phone."
+    ],
+    "timeout_seconds": null,
+    "fallback_action": null
+  },
+  "non_emergency_routing_rules": {
+    "action": "Clara to take a message for non-emergency after-hours calls.",
+    "info_to_collect": [
+      "name",
+      "phone_number",
+      "service_needed",
+      "existing_customer_status"
+    ],
+    "callback_timeframe": "Next business morning",
+    "notes": null
+  },
+  "call_transfer_rules": {
+    "during_hours_transfer": null,
+    "transfer_timeout_seconds": null,
+    "transfer_fail_action": null,
+    "notes": []
+  },
+  "integration_constraints": [
+    "Summit HVAC Solutions uses Housecall Pro for scheduling and dispatching. Clara should integrate with Housecall Pro for scheduling non-emergency appointments or logging service requests."
+  ],
+  "after_hours_flow_summary": "During after-hours, Clara will first determine if the call is an emergency. If it is an emergency (e.g., complete AC failure in a commercial building, gas leak, refrigerant leak, carbon monoxide detector alert, or anything affecting health/safety or causing major business disruption), Clara will attempt to transfer the call to Rick (owner) at 602-555-0156. If Rick does not answer, Clara will then attempt to transfer to Danny (senior tech) at 602-555-0178. The goal is to have someone on-site within an hour for emergencies. For non-emergency after-hours calls, Clara will collect the caller's name, phone number, the type of service needed, and whether they are an existing customer. This message will be forwarded to Karen (office manager) for follow-up on the next business morning.",
+  "office_hours_flow_summary": "During office hours (Monday-Friday 6 AM-6 PM, and seasonally Saturdays 7 AM-2 PM), Clara is expected to answer calls, qualify the caller's intent, and handle inquiries. The transcript implies Clara will help manage the call volume that the two office staff cannot keep up with, suggesting Clara will act as a primary answering agent, potentially scheduling appointments or routing calls as needed, though specific routing for office hours is not detailed beyond the general problem of \"drowning in calls\".",
+  "special_rules": [
+    "Summit HVAC Solutions prioritizes commercial clients, especially for early morning service requests before businesses open.",
+    "On-site response for emergencies is targeted within one hour."
+  ],
+  "questions_or_unknowns": [
+    "What is the specific routing logic for calls during office hours (e.g., transfer to Karen, schedule directly in Housecall Pro, etc.)?",
+    "What is the pricing for the Clara AI software?",
+    "Are there any specific commercial clients that should be treated as emergencies regardless of the issue type?",
+    "What is the timeout duration for transferring emergency calls before escalating to the next tier?"
+  ],
+  "notes": "Summit HVAC Solutions is a 15-year-old commercial and residential HVAC company located in Phoenix, Arizona. The company is owned by Rick, with his wife Karen managing the office. They are experiencing high call volumes, particularly during the brutal Arizona summers, leading to lost business due to slow response times. They currently use Housecall Pro for scheduling and dispatching. The AI agent Clara is being considered to help manage call overflow and ensure emergencies are handled promptly. Pricing for Clara was not discussed in this demo call. No information was provided regarding a second phone number or specific testing/kickoff dates."
+}

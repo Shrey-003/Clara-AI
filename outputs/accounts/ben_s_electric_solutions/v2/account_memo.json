@@ -1,0 +1,147 @@
+{
+  "account_id": "ben_s_electric_solutions",
+  "company_name": "Ben's Electric Solutions",
+  "extraction_date": "2024-11-14",
+  "extraction_type": "onboarding_update",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start_time": "08:00",
+    "end_time": "17:00",
+    "timezone": null,
+    "seasonal_hours": null,
+    "holiday_policy": null
+  },
+  "office_address": null,
+  "timezone": null,
+  "contact_info": [
+    {
+      "name": "Ben Penoyer",
+      "role": "Owner",
+      "phone": "403-975-1773",
+      "email": null,
+      "context": "Owner of Ben's Electric Solutions. This phone number was provided by Ben during the demo as the customer's contact for a test appointment."
+    },
+    {
+      "name": "Nick",
+      "role": "Clara Sales",
+      "phone": null,
+      "email": null,
+      "context": "Clara AI sales representative."
+    },
+    {
+      "name": "Bharat",
+      "role": "Clara Solutions Expert",
+      "phone": null,
+      "email": null,
+      "context": "Clara AI solutions expert and growth partner."
+    },
+    {
+      "name": "Ben",
+      "role": "Owner",
+      "phone": "Main business/personal line (current), new personal line (future)",
+      "email": null,
+      "context": "Owner of Ben's Electric Solutions, currently handles all incoming calls. Will use a second phone number for personal calls, and Clara will transfer business calls to his original number."
+    },
+    {
+      "name": "Bharath",
+      "role": "Clara Onboarding Specialist",
+      "phone": null,
+      "email": null,
+      "context": "Initial point of contact for Clara onboarding."
+    },
+    {
+      "name": "Bobbin",
+      "role": "Dedicated Point of Contact for Clara",
+      "phone": null,
+      "email": null,
+      "context": "Deeply involved in the Clara solution, will be Ben's dedicated contact for configuration and support."
+    }
+  ],
+  "services_supported": [
+    "service calls",
+    "small jobs",
+    "odd jobs",
+    "renovations",
+    "troubleshooting",
+    "new custom home projects",
+    "tenant infill projects",
+    "tenant improvement projects",
+    "EV chargers",
+    "hot tub hookups",
+    "panel changes",
+    "service maintenance",
+    "outlet replacements",
+    "aluminum wiring mitigation",
+    "fixture replacements",
+    "hot tub wiring",
+    "conduit vs cable",
+    "generators",
+    "LED vs incandescent",
+    "new client inquiries",
+    "quote requests",
+    "scheduling appointments",
+    "providing service call fee information"
+  ],
+  "services_excluded": [
+    "emergency services for general public/new clients (especially on weekends)"
+  ],
+  "emergency_definition": [
+    "Calls from 'the one customer' (unnamed commercial client)"
+  ],
+  "emergency_routing_rules": {
+    "escalation_chain": [
+      {
+        "tier": 1,
+        "name": "Ben",
+        "phone": "Main business/personal line"
+      }
+    ],
+    "order": [
+      "For 'the one customer', calls are patched directly to Ben."
+    ],
+    "timeout_seconds": null,
+    "fallback_action": null
+  },
+  "non_emergency_routing_rules": {
+    "action": "During office hours, Clara will answer calls for new clients, small jobs, and service calls. She will qualify intent, collect necessary information, and provide service call fee details ($115 call out, $98/hour residential in half-hour increments) if the caller asks. If a caller insists on speaking to Ben, Clara will transfer the call to Ben's main business line (which will be his original number once he gets a new personal line). After hours, for non-emergency callers, Clara will take a message for the next business day.",
+    "info_to_collect": [
+      "name",
+      "phone_number",
+      "purpose_of_call",
+      "appointment_details_if_scheduling"
+    ],
+    "callback_timeframe": "Next business day (for after-hours non-emergencies)",
+    "notes": "Clara should only mention service fees if explicitly asked by the caller, not proactively on every call."
+  },
+  "call_transfer_rules": {
+    "during_hours_transfer": "Ben's main business line (his original number, once he gets a new personal line)",
+    "transfer_timeout_seconds": null,
+    "transfer_fail_action": null,
+    "notes": []
+  },
+  "integration_constraints": [
+    "Initial call forwarding setup: Ben will configure call forwarding on his Android phone so that if he does not answer or declines a call, it forwards to Clara.",
+    "Future call forwarding setup: Once Ben's second personal number is active, Clara will be the first point of contact for the main business line. Clara will then transfer calls to Ben's original number (which will become his dedicated business line).",
+    "No CRM/Accounting tool (e.g., Jobber, QuickBooks, ServiceTitan) mentioned for integration."
+  ],
+  "after_hours_flow_summary": "During after-hours, if 'the one customer' calls, Clara will patch the call directly through to Ben's main business line. For all other callers, Clara will inform them that it is after business hours and will take a message to be addressed on the next business day.",
+  "office_hours_flow_summary": "During office hours, Ben currently takes all calls. Once Clara is live, initially, calls will forward to Clara if Ben doesn't answer or declines. In the long term, Clara will be the first point of contact for the main business line. Clara will answer calls for new client inquiries, small jobs, and service calls. She will qualify the caller's intent, collect necessary information, and provide service call fee details ($115 call out, $98/hour residential in half-hour increments) if the caller asks. If a caller insists on speaking to Ben, Clara will transfer the call to Ben's main business line (his original number).",
+  "special_rules": [
+    "Clara should only mention service call fees ($115 call out, $98/hour residential) if the caller explicitly asks, not as a default statement.",
+    "Ben is setting up a second phone number for personal use; his current number will become his dedicated business line for Clara transfers."
+  ],
+  "questions_or_unknowns": [
+    "Timezone not confirmed",
+    "Office address not confirmed"
+  ],
+  "notes": "Updated with onboarding data. Operational details confirmed.",
+  "version": "v2",
+  "v1_date": "2024-11-14",
+  "v2_date": "2024-11-28"
+}

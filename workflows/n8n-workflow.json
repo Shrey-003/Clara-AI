@@ -1,0 +1,226 @@
+{
+    "name": "Clara AI Pipeline - n8n Workflow Export",
+    "nodes": [
+        {
+            "parameters": {
+                "rule": {
+                    "interval": [
+                        {
+                            "triggerAtHour": 6
+                        }
+                    ]
+                }
+            },
+            "id": "trigger",
+            "name": "Schedule Trigger",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.2,
+            "position": [
+                200,
+                300
+            ],
+            "notes": "Trigger daily at 6 AM or manually"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Read demo transcript file\nconst fs = require('fs');\nconst content = fs.readFileSync('/home/node/dataset/demo/bens_electric_demo.txt', 'utf-8');\nreturn [{ json: { content, fileName: 'bens_electric_demo.txt' } }];"
+            },
+            "id": "read_demo_files",
+            "name": "Read Demo Files",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                400,
+                200
+            ],
+            "notes": "Read demo transcript file from the dataset folder"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Read onboarding transcript file\nconst fs = require('fs');\nconst content = fs.readFileSync('/home/node/dataset/onboarding/bens_electric_onboarding.txt', 'utf-8');\nreturn [{ json: { content, fileName: 'bens_electric_onboarding.txt' } }];"
+            },
+            "id": "read_onboarding_files",
+            "name": "Read Onboarding Files",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                400,
+                400
+            ],
+            "notes": "Read onboarding transcript file from the dataset folder"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Extract Account Memo from transcript using LLM-based extraction\nconst content = $input.item.json.content;\nconst { extractFromTranscript } = require('/home/node/scripts/extract.js');\nconst memo = await extractFromTranscript(content, 'demo');\nreturn [{ json: memo }];"
+            },
+            "id": "extract_demo",
+            "name": "Extract Demo Data",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                600,
+                200
+            ],
+            "notes": "LLM-based extraction: transcript → Account Memo JSON"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Generate Retell Agent Draft Spec from Account Memo\nconst { generateAgentSpec } = require('/home/node/scripts/generate-agent-spec.js');\nconst spec = generateAgentSpec($input.item.json, 'v1');\nreturn [{ json: { memo: $input.item.json, spec } }];"
+            },
+            "id": "generate_v1_spec",
+            "name": "Generate v1 Agent Spec",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                800,
+                200
+            ],
+            "notes": "Prompt template → Retell Agent Draft Spec (v1)"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Store v1 Account Memo JSON\nconst fs = require('fs');\nconst path = require('path');\nconst dir = `/home/node/outputs/accounts/${$json.memo.account_id}/v1`;\nif (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });\nfs.writeFileSync(path.join(dir, 'account_memo.json'), JSON.stringify($json.memo, null, 2));\nreturn [{ json: $json }];"
+            },
+            "id": "store_v1_memo",
+            "name": "Store v1 Memo",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                1000,
+                150
+            ],
+            "notes": "Save Account Memo JSON using fs.writeFileSync"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Store v1 Agent Spec JSON\nconst fs = require('fs');\nconst path = require('path');\nconst dir = `/home/node/outputs/accounts/${$json.memo.account_id}/v1`;\nif (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });\nfs.writeFileSync(path.join(dir, 'agent_spec.json'), JSON.stringify($json.spec, null, 2));\nreturn [{ json: $json }];"
+            },
+            "id": "store_v1_spec",
+            "name": "Store v1 Spec",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                1000,
+                250
+            ],
+            "notes": "Save Agent Spec JSON using fs.writeFileSync"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Extract onboarding updates and apply to v1\nconst content = $input.item.json.content;\nconst { extractFromTranscript } = require('/home/node/scripts/extract.js');\nconst onboardingData = await extractFromTranscript(content, 'onboarding');\n// Load corresponding v1 memo\nconst fs = require('fs');\nconst v1Path = `/home/node/outputs/accounts/${onboardingData.account_id}/v1/account_memo.json`;\nconst v1Memo = JSON.parse(fs.readFileSync(v1Path, 'utf-8'));\nconst { applyOnboarding } = require('/home/node/scripts/apply-onboarding.js');\nconst result = await applyOnboarding(v1Memo, content);\nreturn [{ json: result }];"
+            },
+            "id": "apply_onboarding",
+            "name": "Apply Onboarding Updates",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                600,
+                400
+            ],
+            "notes": "Merge onboarding data with v1 → produce v2 memo, spec, and changelog"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Store v2 Outputs (Memo, Spec, Changelog)\nconst fs = require('fs');\nconst path = require('path');\nconst dir = `/home/node/outputs/accounts/${$json.v2Memo.account_id}/v2`;\nconst changelogDir = `/home/node/changelog/${$json.v2Memo.account_id}`;\n\nif (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });\nif (!fs.existsSync(changelogDir)) fs.mkdirSync(changelogDir, { recursive: true });\n\nfs.writeFileSync(path.join(dir, 'account_memo.json'), JSON.stringify($json.v2Memo, null, 2));\nfs.writeFileSync(path.join(dir, 'agent_spec.json'), JSON.stringify($json.v2Spec, null, 2));\nfs.writeFileSync(path.join(changelogDir, 'changes.json'), JSON.stringify($json.changelog, null, 2));\n\nreturn [{ json: $json }];"
+            },
+            "id": "store_v2",
+            "name": "Store v2 Outputs",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                800,
+                400
+            ],
+            "notes": "Save all v2 outputs using fs.writeFileSync"
+        },
+        {
+            "parameters": {
+                "jsCode": "// Update task tracker\nconst task = {\n  task_id: `TASK-${Date.now()}`,\n  account_id: $input.item.json.memo?.account_id || $input.item.json.v2Memo?.account_id,\n  status: 'completed',\n  timestamp: new Date().toISOString()\n};\nreturn [{ json: task }];"
+            },
+            "id": "update_tracker",
+            "name": "Update Task Tracker",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+                1200,
+                300
+            ],
+            "notes": "Update local task tracker (Asana alternative)"
+        }
+    ],
+    "connections": {
+        "Schedule Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Read Demo Files"
+                    }
+                ]
+            ]
+        },
+        "Read Demo Files": {
+            "main": [
+                [
+                    {
+                        "node": "Extract Demo Data"
+                    }
+                ]
+            ]
+        },
+        "Extract Demo Data": {
+            "main": [
+                [
+                    {
+                        "node": "Generate v1 Agent Spec"
+                    }
+                ]
+            ]
+        },
+        "Generate v1 Agent Spec": {
+            "main": [
+                [
+                    {
+                        "node": "Store v1 Memo"
+                    },
+                    {
+                        "node": "Store v1 Spec"
+                    },
+                    {
+                        "node": "Update Task Tracker"
+                    },
+                    {
+                        "node": "Read Onboarding Files"
+                    }
+                ]
+            ]
+        },
+        "Read Onboarding Files": {
+            "main": [
+                [
+                    {
+                        "node": "Apply Onboarding Updates"
+                    }
+                ]
+            ]
+        },
+        "Apply Onboarding Updates": {
+            "main": [
+                [
+                    {
+                        "node": "Store v2 Outputs"
+                    },
+                    {
+                        "node": "Update Task Tracker"
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "meta": {
+        "description": "Clara AI Zero-Cost Automation Pipeline: Demo Call → Retell Agent v1 → Onboarding → Agent v2",
+        "notes": "Import this workflow into n8n. The extraction and generation logic is in the /scripts/ folder."
+    }
+}

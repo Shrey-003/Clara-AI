@@ -1,0 +1,347 @@
+{
+  "account_id": "ben_s_electric_solutions",
+  "changed_at": "2026-03-04T14:28:08.750Z",
+  "changes": [
+    {
+      "field": "extraction_type",
+      "v1_value": "demo",
+      "v2_value": "onboarding_update",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.days",
+      "v1_value": null,
+      "v2_value": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.start_time",
+      "v1_value": null,
+      "v2_value": "08:00",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.end_time",
+      "v1_value": null,
+      "v2_value": "17:00",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "contact_info",
+      "v1_value": [
+        {
+          "name": "Ben Penoyer",
+          "role": "Owner",
+          "phone": "403-975-1773",
+          "email": null,
+          "context": "Owner of Ben's Electric Solutions. This phone number was provided by Ben during the demo as the customer's contact for a test appointment."
+        },
+        {
+          "name": "Nick",
+          "role": "Clara Sales",
+          "phone": null,
+          "email": null,
+          "context": "Clara AI sales representative."
+        },
+        {
+          "name": "Bharat",
+          "role": "Clara Solutions Expert",
+          "phone": null,
+          "email": null,
+          "context": "Clara AI solutions expert and growth partner."
+        }
+      ],
+      "v2_value": [
+        {
+          "name": "Ben Penoyer",
+          "role": "Owner",
+          "phone": "403-975-1773",
+          "email": null,
+          "context": "Owner of Ben's Electric Solutions. This phone number was provided by Ben during the demo as the customer's contact for a test appointment."
+        },
+        {
+          "name": "Nick",
+          "role": "Clara Sales",
+          "phone": null,
+          "email": null,
+          "context": "Clara AI sales representative."
+        },
+        {
+          "name": "Bharat",
+          "role": "Clara Solutions Expert",
+          "phone": null,
+          "email": null,
+          "context": "Clara AI solutions expert and growth partner."
+        },
+        {
+          "name": "Ben",
+          "role": "Owner",
+          "phone": "Main business/personal line (current), new personal line (future)",
+          "email": null,
+          "context": "Owner of Ben's Electric Solutions, currently handles all incoming calls. Will use a second phone number for personal calls, and Clara will transfer business calls to his original number."
+        },
+        {
+          "name": "Bharath",
+          "role": "Clara Onboarding Specialist",
+          "phone": null,
+          "email": null,
+          "context": "Initial point of contact for Clara onboarding."
+        },
+        {
+          "name": "Bobbin",
+          "role": "Dedicated Point of Contact for Clara",
+          "phone": null,
+          "email": null,
+          "context": "Deeply involved in the Clara solution, will be Ben's dedicated contact for configuration and support."
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_supported",
+      "v1_value": [
+        "service calls",
+        "small jobs",
+        "odd jobs",
+        "renovations",
+        "troubleshooting",
+        "new custom home projects",
+        "tenant infill projects",
+        "tenant improvement projects",
+        "EV chargers",
+        "hot tub hookups",
+        "panel changes",
+        "service maintenance",
+        "outlet replacements",
+        "aluminum wiring mitigation",
+        "fixture replacements",
+        "hot tub wiring",
+        "conduit vs cable",
+        "generators",
+        "LED vs incandescent"
+      ],
+      "v2_value": [
+        "service calls",
+        "small jobs",
+        "odd jobs",
+        "renovations",
+        "troubleshooting",
+        "new custom home projects",
+        "tenant infill projects",
+        "tenant improvement projects",
+        "EV chargers",
+        "hot tub hookups",
+        "panel changes",
+        "service maintenance",
+        "outlet replacements",
+        "aluminum wiring mitigation",
+        "fixture replacements",
+        "hot tub wiring",
+        "conduit vs cable",
+        "generators",
+        "LED vs incandescent",
+        "new client inquiries",
+        "quote requests",
+        "scheduling appointments",
+        "providing service call fee information"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_definition",
+      "v1_value": [
+        "Gas station pumps go down (for specific property manager client)",
+        "Emergency calls for regular property managers",
+        "Emergency calls for general contractors"
+      ],
+      "v2_value": [
+        "Calls from 'the one customer' (unnamed commercial client)"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.escalation_chain",
+      "v1_value": [
+        {
+          "tier": 1,
+          "name": "Ben Penoyer",
+          "phone": null
+        }
+      ],
+      "v2_value": [
+        {
+          "tier": 1,
+          "name": "Ben",
+          "phone": "Main business/personal line"
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.order",
+      "v1_value": [
+        "Clara to identify emergency calls from specific property managers or general contractors (e.g., gas station pump failures).",
+        "Transfer these specific emergency calls to Ben Penoyer, who is the designated on-call person."
+      ],
+      "v2_value": [
+        "For 'the one customer', calls are patched directly to Ben."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.fallback_action",
+      "v1_value": "Defer general public emergency calls elsewhere.",
+      "v2_value": null,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.action",
+      "v1_value": "Clara AI to answer calls, speak, understand, respond, and act to qualify customer intent. Clara will provide information, answer technical questions, and collect necessary details to book a meeting directly into the calendar.",
+      "v2_value": "During office hours, Clara will answer calls for new clients, small jobs, and service calls. She will qualify intent, collect necessary information, and provide service call fee details ($115 call out, $98/hour residential in half-hour increments) if the caller asks. If a caller insists on speaking to Ben, Clara will transfer the call to Ben's main business line (which will be his original number once he gets a new personal line). After hours, for non-emergency callers, Clara will take a message for the next business day.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.info_to_collect",
+      "v1_value": [
+        "name",
+        "address",
+        "phone_number",
+        "service_request_details"
+      ],
+      "v2_value": [
+        "name",
+        "phone_number",
+        "purpose_of_call",
+        "appointment_details_if_scheduling"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.callback_timeframe",
+      "v1_value": "Clara books appointments directly, no callback timeframe specified for non-emergencies.",
+      "v2_value": "Next business day (for after-hours non-emergencies)",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.notes",
+      "v1_value": "Clara is currently trained to get meetings booked directly.",
+      "v2_value": "Clara should only mention service fees if explicitly asked by the caller, not proactively on every call.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.during_hours_transfer",
+      "v1_value": "Ben Penoyer (for specific emergencies)",
+      "v2_value": "Ben's main business line (his original number, once he gets a new personal line)",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "integration_constraints",
+      "v1_value": [
+        "CRM: Jobber (Ben's Electric Solutions uses Jobber and finds it 'fantastic'). Clara needs to integrate with Jobber for scheduling appointments.",
+        "Previous phone system issues: Ben experienced problems with a prior phone system where an app assigned different numbers to team members, which appeared as spam, leading to calls not being answered. Clara's solution should avoid this issue."
+      ],
+      "v2_value": [
+        "Initial call forwarding setup: Ben will configure call forwarding on his Android phone so that if he does not answer or declines a call, it forwards to Clara.",
+        "Future call forwarding setup: Once Ben's second personal number is active, Clara will be the first point of contact for the main business line. Clara will then transfer calls to Ben's original number (which will become his dedicated business line).",
+        "No CRM/Accounting tool (e.g., Jobber, QuickBooks, ServiceTitan) mentioned for integration."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "after_hours_flow_summary",
+      "v1_value": "Clara AI will answer calls 24/7. For general inquiries or non-emergency service requests, Clara will qualify the intent, collect customer name, address, phone number, and service details, and then book a meeting directly into the calendar. For specific emergency clients (regular property managers and general contractors, particularly for critical issues like gas station pump failures), Clara should route the call to Ben Penoyer, who is the designated on-call person. Other emergency calls from the general public will be deferred elsewhere.",
+      "v2_value": "During after-hours, if 'the one customer' calls, Clara will patch the call directly through to Ben's main business line. For all other callers, Clara will inform them that it is after business hours and will take a message to be addressed on the next business day.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "office_hours_flow_summary",
+      "v1_value": "Clara AI will answer calls during office hours. Clara will speak, understand, respond, and act to qualify customer intent for various services (e.g., outlet replacements, EV chargers, hot tub hookups, panel changes). Clara is capable of answering technical questions. Clara will collect customer name, address, phone number, and service details, and then book a meeting directly into the calendar. Clara is designed to handle multiple calls simultaneously and filter spam/sales calls. Notifications of booked appointments will be sent via email, text, and available on a dashboard.",
+      "v2_value": "During office hours, Ben currently takes all calls. Once Clara is live, initially, calls will forward to Clara if Ben doesn't answer or declines. In the long term, Clara will be the first point of contact for the main business line. Clara will answer calls for new client inquiries, small jobs, and service calls. She will qualify the caller's intent, collect necessary information, and provide service call fee details ($115 call out, $98/hour residential in half-hour increments) if the caller asks. If a caller insists on speaking to Ben, Clara will transfer the call to Ben's main business line (his original number).",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "special_rules",
+      "v1_value": [
+        "Ben's Electric Solutions is not generally equipped for emergency services for the public, but provides them for specific regular property managers and general contractors.",
+        "Ben Penoyer is the sole on-call person for emergencies.",
+        "Clara should be able to answer technical questions related to electrical work, as demonstrated in the demo."
+      ],
+      "v2_value": [
+        "Clara should only mention service call fees ($115 call out, $98/hour residential) if the caller explicitly asks, not as a default statement.",
+        "Ben is setting up a second phone number for personal use; his current number will become his dedicated business line for Clara transfers."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "questions_or_unknowns",
+      "v1_value": [
+        "What is the exact monthly price for the basic plan (500 minutes)? The transcript only states 'a month'.",
+        "What are the specific business hours (days and times)?",
+        "What is Ben Penoyer's direct phone number for emergency routing (if different from the demo number)?",
+        "What is the exact office address for Ben's Electric Solutions?",
+        "What is the business's primary timezone?"
+      ],
+      "v2_value": [
+        "Timezone not confirmed",
+        "Office address not confirmed"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "notes",
+      "v1_value": "Ben's Electric Solutions is owned by Ben Penoyer, an electrician with 30 years of experience, running his own business for 8 years. The company is growing, currently operating with 3 journeymen, 1 apprentice, Ben himself, and soon a new operations manager, plus subcontractors for overflow work. They operate 3 company vans and use 2 subcontractors, aiming for 5 vans by year-end. Ben currently handles all admin and back-end tasks, including office calls, but also performs customer-facing roles like quotes. He previously had negative experiences with virtual assistants and a phone system that assigned spam-like numbers. The business uses Jobber as its CRM, which Ben finds 'fantastic'. Clara AI was sold on a basic plan offering 500 minutes per month, but the exact price was not stated in the transcript. Ben committed to a three-month trial. A kickoff/onboarding call is scheduled for the next day at noon. Clara is expected to handle a wide range of electrical service inquiries, including technical questions, and is currently trained to book meetings directly. Notifications for booked appointments will be sent via email and text, and available on a dashboard. Clara is also expected to filter spam/sales calls. Emergency services are only provided for specific property managers and general contractors (e.g., gas station pump failures), with Ben Penoyer being the sole on-call person. General public emergencies are deferred.",
+      "v2_value": "Updated with onboarding data. Operational details confirmed.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "version",
+      "v1_value": null,
+      "v2_value": "v2",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v1_date",
+      "v1_value": null,
+      "v2_value": "2024-11-14",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v2_date",
+      "v1_value": null,
+      "v2_value": "2024-11-28",
+      "reason": "confirmed during onboarding call"
+    }
+  ],
+  "fields_unchanged": [
+    "account_id",
+    "business_hours.holiday_policy",
+    "business_hours.seasonal_hours",
+    "business_hours.timezone",
+    "call_transfer_rules.notes",
+    "call_transfer_rules.transfer_fail_action",
+    "call_transfer_rules.transfer_timeout_seconds",
+    "company_name",
+    "emergency_routing_rules.timeout_seconds",
+    "extraction_date",
+    "office_address",
+    "services_excluded",
+    "timezone"
+  ],
+  "questions_resolved": [
+    "What is the exact monthly price for the basic plan (500 minutes)? The transcript only states 'a month'.",
+    "What are the specific business hours (days and times)?",
+    "What is Ben Penoyer's direct phone number for emergency routing (if different from the demo number)?",
+    "What is the exact office address for Ben's Electric Solutions?",
+    "What is the business's primary timezone?"
+  ],
+  "questions_still_open": [
+    "Timezone not confirmed",
+    "Office address not confirmed"
+  ]
+}

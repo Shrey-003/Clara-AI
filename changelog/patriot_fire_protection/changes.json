@@ -1,0 +1,387 @@
+{
+  "account_id": "patriot_fire_protection",
+  "changed_at": "2026-03-04T14:29:17.284Z",
+  "changes": [
+    {
+      "field": "extraction_type",
+      "v1_value": "demo",
+      "v2_value": "onboarding_update",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.days",
+      "v1_value": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "v2_value": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.seasonal_hours",
+      "v1_value": "Saturday crew works 8 AM to 12 PM for scheduled inspections only.",
+      "v2_value": "Saturday crew from 8 AM to 12 PM for scheduled inspections only; no new intake on Saturdays.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "contact_info",
+      "v1_value": [
+        {
+          "name": "Carlos",
+          "role": "Dispatcher",
+          "phone": "713-555-0234",
+          "email": null,
+          "context": "Primary contact for 24/7 emergency line, first tier of escalation."
+        },
+        {
+          "name": "Luis",
+          "role": "On-call Technician",
+          "phone": "713-555-0298",
+          "email": null,
+          "context": "Current on-call technician, second tier of emergency escalation if Carlos doesn't answer."
+        }
+      ],
+      "v2_value": [
+        {
+          "name": "Carlos",
+          "role": "Dispatcher",
+          "phone": "713-555-0234",
+          "email": null,
+          "context": "Primary contact for 24/7 emergency line, first tier of escalation."
+        },
+        {
+          "name": "Luis",
+          "role": "On-call Technician",
+          "phone": "713-555-0298",
+          "email": null,
+          "context": "Current on-call technician, second tier of emergency escalation if Carlos doesn't answer."
+        },
+        {
+          "name": "Dave Martinez",
+          "role": "Operations Manager",
+          "phone": "713-555-0256",
+          "email": "dave@patriotfireprotection.com",
+          "context": "Fallback contact for emergency routing."
+        },
+        {
+          "name": "Carlos",
+          "role": "Dispatcher",
+          "phone": "713-555-0234",
+          "email": null,
+          "context": "First tier contact for emergency routing."
+        },
+        {
+          "name": "Luis",
+          "role": "On-call Technician",
+          "phone": "713-555-0298",
+          "email": null,
+          "context": "Second tier contact for emergency routing. This number rotates weekly and needs to be updated."
+        },
+        {
+          "name": null,
+          "role": "General Inquiries",
+          "phone": null,
+          "email": "info@patriotfireprotection.com",
+          "context": "General email for business inquiries."
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_supported",
+      "v1_value": [
+        "fire sprinkler system installation",
+        "fire sprinkler system repair",
+        "fire sprinkler system inspection",
+        "fire alarm system installation",
+        "fire alarm system monitoring",
+        "fire extinguisher sales",
+        "fire extinguisher servicing",
+        "fire extinguisher inspection",
+        "kitchen hood suppression systems",
+        "backflow preventer testing"
+      ],
+      "v2_value": [
+        "fire sprinkler system installation",
+        "fire sprinkler system repair",
+        "fire sprinkler system inspection",
+        "fire alarm system installation",
+        "fire alarm system monitoring",
+        "fire extinguisher sales",
+        "fire extinguisher servicing",
+        "fire extinguisher inspection",
+        "kitchen hood suppression systems",
+        "backflow preventer testing",
+        "Fire sprinkler system installation",
+        "Fire sprinkler system repair",
+        "Fire sprinkler system testing",
+        "Fire sprinkler system inspection",
+        "Fire alarm system installation",
+        "Fire alarm system repair",
+        "Fire alarm system monitoring coordination",
+        "Fire extinguisher sales",
+        "Fire extinguisher service",
+        "Fire extinguisher annual inspections",
+        "Kitchen hood suppression system installation",
+        "Kitchen hood suppression system service",
+        "Backflow preventer testing",
+        "Backflow preventer certification",
+        "Fire pump testing",
+        "Fire pump maintenance",
+        "Emergency light inspection",
+        "Emergency light replacement",
+        "Exit sign inspection",
+        "Exit sign replacement",
+        "Free estimates for commercial fire protection services"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_excluded",
+      "v1_value": [],
+      "v2_value": [
+        "Residential fire alarms",
+        "Security alarm systems",
+        "HVAC",
+        "Plumbing",
+        "Calls from outside Texas and Louisiana"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_definition",
+      "v1_value": [
+        "Fire sprinkler leaks",
+        "fire alarm malfunctions",
+        "any active fire suppression situation",
+        "burst sprinkler head (e.g., at a hospital)"
+      ],
+      "v2_value": [
+        "Active fire sprinkler system leaks",
+        "Fire sprinkler head breaks or discharges",
+        "Fire alarm system malfunctions causing false alarms that won't stop",
+        "Complete fire alarm panel failures leaving a building unprotected",
+        "Any situation where a fire suppression system has activated",
+        "Kitchen hood suppression system discharges",
+        "Monitoring company calls (e.g., ADT, SimpliSafe, any third-party)"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.escalation_chain",
+      "v1_value": [
+        {
+          "tier": 1,
+          "name": "Carlos",
+          "phone": "713-555-0234"
+        },
+        {
+          "tier": 2,
+          "name": "Luis",
+          "phone": "713-555-0298"
+        }
+      ],
+      "v2_value": [
+        {
+          "tier": 1,
+          "name": "Carlos (Dispatcher)",
+          "phone": "713-555-0234"
+        },
+        {
+          "tier": 2,
+          "name": "On-call Technician (Luis)",
+          "phone": "713-555-0298"
+        },
+        {
+          "tier": 3,
+          "name": "Dave Martinez (Operations Manager)",
+          "phone": "713-555-0256"
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.order",
+      "v1_value": [
+        "transfer to Carlos (Dispatcher)",
+        "if Carlos does not pick up within 45 seconds, roll to Luis (On-call Technician)"
+      ],
+      "v2_value": [
+        "Transfer to Carlos (Dispatcher)",
+        "If no answer, transfer to On-call Technician",
+        "If no answer, transfer to Dave Martinez (Operations Manager)"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.fallback_action",
+      "v1_value": null,
+      "v2_value": "If no one picks up after all three attempts, collect caller's name, number, property address, and exact nature of the alarm or leak. Inform caller that someone WILL call back within 10 minutes. Send a simultaneous text notification to Dave, Carlos, and the on-call technician.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.action",
+      "v1_value": "Clara to answer calls, qualify intent, collect caller information, and inform them that their request will be handled the next business day.",
+      "v2_value": "Clara is to take a message for all non-emergency inquiries.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.info_to_collect",
+      "v1_value": [
+        "name",
+        "phone_number",
+        "reason_for_call"
+      ],
+      "v2_value": [
+        "name",
+        "company_name",
+        "phone_number",
+        "property_address",
+        "type_of_service_needed"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.callback_timeframe",
+      "v1_value": "next business day",
+      "v2_value": "Next business day",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.notes",
+      "v1_value": "Many non-emergency calls are for inspection scheduling requests.",
+      "v2_value": "Clara should never promise a response time for non-emergencies. For Saturday new intake, take a message and handle it Monday.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.during_hours_transfer",
+      "v1_value": null,
+      "v2_value": "Monitoring company calls (e.g., ADT, SimpliSafe, any third-party) should be treated as priority calls and transferred immediately to an appropriate internal contact (likely Carlos or the on-call technician).",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.transfer_timeout_seconds",
+      "v1_value": 45,
+      "v2_value": null,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.notes",
+      "v1_value": [
+        "Transfer timeout and fail action rules apply specifically to after-hours emergency routing."
+      ],
+      "v2_value": [
+        "Monitoring company calls are considered emergencies and require immediate transfer."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "integration_constraints",
+      "v1_value": [
+        "Patriot Fire Protection uses ServiceTrade for job management, specifically for tracking inspections and recurring services.",
+        "Automated systems (like Clara) must NOT create sprinkler jobs in ServiceTrade; these must be created manually by the Patriot Fire Protection team due to their complex job types."
+      ],
+      "v2_value": [
+        "Clara should never create sprinkler jobs in ServiceTrade. This process must be done manually by the Patriot Fire Protection team due to specific job type classification requirements."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "after_hours_flow_summary",
+      "v1_value": "During after-hours (outside of Monday-Friday 8 AM - 6 PM CT, and Saturday 8 AM - 12 PM CT), Clara will first triage the call to determine if it's an emergency. If it's an emergency (e.g., fire sprinkler leak, fire alarm malfunction, active fire suppression situation), Clara will immediately transfer the call to the 24/7 emergency line, first attempting to reach dispatcher Carlos (713-555-0234). If Carlos does not answer within 45 seconds, the call will automatically roll over to the on-call technician, currently Luis (713-555-0298). For non-emergency after-hours calls, Clara will collect the caller's name, phone number, and the reason for their call (e.g., inspection scheduling request), informing them that their request will be handled the next business day.",
+      "v2_value": "During after-hours, Clara will first determine if the call is an emergency. If it is an emergency, Clara will attempt to transfer the call sequentially to Carlos (45 seconds timeout), then the on-call technician (45 seconds timeout), and finally Dave Martinez (45 seconds timeout). If no one answers, Clara will collect the caller's name, number, property address, and the exact nature of the alarm or leak, assuring them someone will call back within 10 minutes, and then send a simultaneous text notification to Dave, Carlos, and the on-call technician. If the call is a non-emergency, Clara will collect the caller's name, company name (if applicable), phone number, property address, and the type of service needed, informing them that they will receive a callback the next business day.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "office_hours_flow_summary",
+      "v1_value": "During office hours (Monday-Friday, 8 AM - 6 PM CT), Clara is expected to handle incoming non-emergency calls, such as inspection scheduling requests and general inquiries. She will qualify the caller's intent, collect necessary information (name, phone number, reason for call), and inform them that their request will be processed by the office staff. This aims to reduce the call volume handled by the three existing office staff, allowing them to focus on critical tasks, vendor calls, and actual emergencies. Clara will not create sprinkler jobs in ServiceTrade.",
+      "v2_value": "During office hours (Monday-Friday, 8 AM-6 PM Central Time), Clara will handle calls. For emergencies, the routing follows the same escalation chain as after-hours emergencies. For non-emergencies, Clara will collect necessary information (name, company, phone, address, service type) and inform the caller they will be called back, mentioning free estimates for commercial services. On Saturdays (8 AM-12 PM), Clara will only process calls for scheduled inspections. Any new intake requests on Saturday will be handled as non-emergencies, with Clara taking a message and informing the caller it will be addressed on Monday. Monitoring company calls are considered priority and will be immediately transferred to an appropriate internal contact.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "special_rules",
+      "v1_value": [
+        "Automated systems must not create sprinkler jobs in ServiceTrade; these must be created manually by the Patriot Fire Protection team.",
+        "Saturday hours (8 AM - 12 PM CT) are specifically for scheduled inspections only."
+      ],
+      "v2_value": [
+        "Patriot Fire Protection is licensed only in Texas and Louisiana; calls from outside these states should be politely declined.",
+        "Clara can mention that free estimates are offered for commercial fire protection services.",
+        "Clara must never promise a response time for non-emergencies.",
+        "For emergencies, Clara can state that the aim is for a 30-minute response.",
+        "Monitoring company calls (e.g., ADT, SimpliSafe, any third-party) are priority calls and must be transferred immediately, even during business hours.",
+        "Saturday hours (8 AM - 12 PM) are strictly for scheduled inspections; new intake requests received on Saturday should be messaged and handled on Monday."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "questions_or_unknowns",
+      "v1_value": [
+        "What is the fallback action if the on-call technician (Luis) does not pick up during an emergency transfer?",
+        "Is there a specific list of 'critical clients' or is the 'hospital' example indicative of any critical infrastructure client?",
+        "What is the pricing for the AI software?",
+        "What is the corporate structure of Patriot Fire Protection?",
+        "Are there any specific requirements for a 2nd phone number status?",
+        "What are the planned testing or kickoff dates for Clara?"
+      ],
+      "v2_value": [],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "notes",
+      "v1_value": "Patriot Fire Protection is an 8-year-old commercial fire protection company based in Houston, Texas. They specialize in fire sprinkler systems, fire alarms, fire extinguisher services, kitchen hood suppression systems, and backflow preventer testing for commercial properties. They are seeking an AI answering solution because their three office staff are overwhelmed with call volume, leading to missed critical calls, such as a recent incident involving a hospital with a burst sprinkler head. They currently use ServiceTrade for job management, particularly for tracking inspections and recurring services. A key operational constraint is that automated systems, including Clara, must not create sprinkler jobs in ServiceTrade due to the complexity of these job types; such tasks must be handled manually by their team. The AI agent, Clara, is intended to triage calls, especially for emergencies, and collect detailed information for non-emergencies to alleviate the burden on their staff. Pricing for the AI software was not discussed in this demo call. No information regarding corporate structure, 2nd phone number status, or specific testing/kickoff dates was provided in the transcript.",
+      "v2_value": "Updated with onboarding data. Operational details confirmed.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "version",
+      "v1_value": null,
+      "v2_value": "v2",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v1_date",
+      "v1_value": null,
+      "v2_value": "2024-11-18",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v2_date",
+      "v1_value": null,
+      "v2_value": "2024-11-21",
+      "reason": "confirmed during onboarding call"
+    }
+  ],
+  "fields_unchanged": [
+    "account_id",
+    "business_hours.end_time",
+    "business_hours.holiday_policy",
+    "business_hours.start_time",
+    "business_hours.timezone",
+    "call_transfer_rules.transfer_fail_action",
+    "company_name",
+    "emergency_routing_rules.timeout_seconds",
+    "extraction_date",
+    "office_address",
+    "timezone"
+  ],
+  "questions_resolved": [
+    "What is the fallback action if the on-call technician (Luis) does not pick up during an emergency transfer?",
+    "Is there a specific list of 'critical clients' or is the 'hospital' example indicative of any critical infrastructure client?",
+    "What is the pricing for the AI software?",
+    "What is the corporate structure of Patriot Fire Protection?",
+    "Are there any specific requirements for a 2nd phone number status?",
+    "What are the planned testing or kickoff dates for Clara?"
+  ],
+  "questions_still_open": []
+}

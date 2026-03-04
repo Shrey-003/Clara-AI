@@ -1,0 +1,122 @@
+{
+  "account_id": "coastal_alarm_systems",
+  "company_name": "Coastal Alarm Systems",
+  "extraction_date": "2024-11-22",
+  "extraction_type": "demo",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start_time": "8 AM",
+    "end_time": "5 PM",
+    "timezone": "Eastern Time",
+    "seasonal_hours": null,
+    "holiday_policy": null
+  },
+  "office_address": "2750 South Dale Mabry Highway, Suite 310, Tampa, Florida 33629",
+  "timezone": "Eastern Time",
+  "contact_info": [
+    {
+      "name": "Maria",
+      "role": "Receptionist",
+      "phone": "813-555-0145",
+      "email": null,
+      "context": "First point of contact for emergencies, handles calls during the day and billing/paperwork."
+    },
+    {
+      "name": "Tony",
+      "role": "Owner",
+      "phone": "813-555-0167",
+      "email": null,
+      "context": "Second point of contact for emergencies, currently receives all after-hours calls on his cell phone."
+    },
+    {
+      "name": "Pete",
+      "role": "Lead Installer",
+      "phone": "813-555-0189",
+      "email": null,
+      "context": "Last resort for critical emergency calls."
+    }
+  ],
+  "services_supported": [
+    "Commercial fire alarm system installation",
+    "Commercial fire alarm system inspection",
+    "Commercial security alarm systems",
+    "Access control systems (key cards, fobs, biometrics)",
+    "CCTV installation",
+    "Video surveillance installation",
+    "Alarm monitoring coordination",
+    "Low-voltage wiring",
+    "New installation quotes",
+    "Service visit scheduling"
+  ],
+  "services_excluded": [],
+  "emergency_definition": [
+    "Fire alarm system malfunctions (especially false alarms disrupting business and unable to silence)",
+    "Alarm panel completely down leaving a building unprotected",
+    "Security system failures at high-risk facilities (e.g., banks, data centers)",
+    "Any call from monitoring partners about a critical system fault"
+  ],
+  "emergency_routing_rules": {
+    "escalation_chain": [
+      {
+        "tier": 1,
+        "name": "Maria",
+        "phone": "813-555-0145"
+      },
+      {
+        "tier": 2,
+        "name": "Tony",
+        "phone": "813-555-0167"
+      },
+      {
+        "tier": 3,
+        "name": "Pete",
+        "phone": "813-555-0189"
+      }
+    ],
+    "order": [
+      "Transfer to Maria's phone number",
+      "If Maria cannot be reached, transfer to Tony's phone number",
+      "If Tony cannot be reached, transfer to Pete's phone number"
+    ],
+    "timeout_seconds": null,
+    "fallback_action": null
+  },
+  "non_emergency_routing_rules": {
+    "action": "Clara to answer calls, identify as non-emergency (e.g., requests for quotes on new installations or scheduling service visits), collect necessary information, and take a message for callback.",
+    "info_to_collect": [
+      "caller_name",
+      "caller_phone_number",
+      "reason_for_call"
+    ],
+    "callback_timeframe": "Next business day",
+    "notes": null
+  },
+  "call_transfer_rules": {
+    "during_hours_transfer": null,
+    "transfer_timeout_seconds": null,
+    "transfer_fail_action": null,
+    "notes": []
+  },
+  "integration_constraints": [
+    "Uses Connectwise Manage for ticketing and project management, but currently has no API integrations for it. Clara should not attempt direct integration with Connectwise Manage at this time."
+  ],
+  "after_hours_flow_summary": "During after-hours (evenings, weekends, and holidays), Clara will first determine if the call is an emergency based on defined triggers (fire alarm malfunctions, alarm panel down, security system failures at high-risk facilities, or critical monitoring partner calls). If it's an emergency, Clara will follow the three-tier escalation protocol: first attempting to reach Maria (813-555-0145), then Tony (813-555-0167), and finally Pete (813-555-0189). If the call is not an emergency, Clara will inform the caller that the office is closed, collect their name, phone number, and reason for calling, and assure them that someone will call them back on the next business day. Weekends are specifically reserved for emergency callbacks only.",
+  "office_hours_flow_summary": "During office hours (Monday-Friday, 8 AM-5 PM Eastern Time), Clara will screen incoming calls. If the call is identified as an emergency (e.g., fire alarm malfunction, security system failure at high-risk facility, critical monitoring partner call), Clara will immediately initiate the emergency routing protocol: first attempting to reach Maria (813-555-0145), then Tony (813-555-0167), and finally Pete (813-555-0189). For non-emergency calls, such as requests for new installation quotes or scheduling service visits, Clara will collect the caller's name, phone number, and the nature of their inquiry, and take a message for Maria or other staff to address during business hours. Clara will handle monitoring company calls professionally, adapting conversation style as needed.",
+  "special_rules": [
+    "Coastal Alarm Systems does not work weekends unless it is an emergency callback."
+  ],
+  "questions_or_unknowns": [
+    "What is the desired timeout duration for each tier in the emergency escalation chain before moving to the next contact?",
+    "What is the fallback action if Pete (Tier 3) cannot be reached for an emergency?",
+    "What is the specific pricing for Clara's service?",
+    "Are there specific email addresses for Maria, Tony, or Pete for non-phone communication or notifications?",
+    "Should Clara send a summary of non-emergency messages via email or integrate with Connectwise Manage for message logging (despite no current API integration)?"
+  ],
+  "notes": "Coastal Alarm Systems is a commercial security and fire alarm system installer and service provider based in Tampa, Florida. The company has been in business for 6 years and has grown from 5 to 18 employees in the last two years. They specialize in commercial fire alarm systems, security alarm systems, access control, CCTV, alarm monitoring coordination, and low-voltage wiring. Currently, their receptionist Maria handles calls during business hours, while after-hours calls are forwarded to the owner Tony's cell phone, which he finds disruptive. They use Connectwise Manage for ticketing and project management but do not have any API integrations. The pricing for Clara's software was not discussed in this transcript, only that a proposal would be sent. The onboarding call is scheduled for 'next week'. No mention of Jobber or QuickBooks usage. Tony's cell phone (813-555-0167) currently serves as the primary after-hours contact, which Clara will now manage through the emergency routing."
+}

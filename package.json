@@ -1,0 +1,25 @@
+{
+  "name": "clara-ai-pipeline",
+  "version": "1.0.0",
+  "description": "Zero-Cost Automation Pipeline: Demo Call -> Retell Agent Draft -> Onboarding Updates -> Agent Revision",
+  "main": "scripts/orchestrator.js",
+  "scripts": {
+    "pipeline": "node scripts/orchestrator.js",
+    "pipeline:demo": "node scripts/orchestrator.js --demo-only",
+    "pipeline:onboarding": "node scripts/orchestrator.js --onboarding-only",
+    "dashboard": "node scripts/serve-dashboard.js",
+    "validate": "node scripts/validate-outputs.js",
+    "clean": "node scripts/clean-outputs.js"
+  },
+  "keywords": [
+    "clara",
+    "retell",
+    "automation",
+    "pipeline"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "whisper-node": "^1.1.1"
+  }
+}

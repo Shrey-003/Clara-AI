@@ -1,0 +1,383 @@
+{
+  "account_id": "summit_hvac_solutions",
+  "changed_at": "2026-03-04T14:29:47.392Z",
+  "changes": [
+    {
+      "field": "extraction_type",
+      "v1_value": "demo",
+      "v2_value": "onboarding_update",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.days",
+      "v1_value": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "v2_value": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.start_time",
+      "v1_value": "6 AM",
+      "v2_value": "06:00",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.end_time",
+      "v1_value": "6 PM",
+      "v2_value": "18:00",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.timezone",
+      "v1_value": "Mountain Time",
+      "v2_value": "America/Phoenix",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.seasonal_hours",
+      "v1_value": "Saturdays are 7 AM to 2 PM, April through September.",
+      "v2_value": "Saturdays: 7 AM to 2 PM from April through September. Closed Saturdays from October through March.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.holiday_policy",
+      "v1_value": null,
+      "v2_value": "Closed on all major holidays (New Year's, Memorial Day, July 4th, Labor Day, Thanksgiving, Christmas). Rick takes emergency calls on holidays for existing customers.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "timezone",
+      "v1_value": "Mountain Time",
+      "v2_value": "America/Phoenix",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "contact_info",
+      "v1_value": [
+        {
+          "name": "Karen",
+          "role": "Office Manager",
+          "phone": null,
+          "email": null,
+          "context": "Manages the office for Summit HVAC Solutions and handles non-emergency after-hours follow-ups."
+        },
+        {
+          "name": "Rick",
+          "role": "Owner",
+          "phone": "602-555-0156",
+          "email": null,
+          "context": "Owner of Summit HVAC Solutions, handles primary after-hours emergency calls."
+        },
+        {
+          "name": "Danny",
+          "role": "Senior Tech",
+          "phone": "602-555-0178",
+          "email": null,
+          "context": "Senior technician, serves as backup for after-hours emergency calls."
+        }
+      ],
+      "v2_value": [
+        {
+          "name": "Karen",
+          "role": "Office Manager",
+          "phone": null,
+          "email": null,
+          "context": "Manages the office for Summit HVAC Solutions and handles non-emergency after-hours follow-ups."
+        },
+        {
+          "name": "Rick",
+          "role": "Owner",
+          "phone": "602-555-0156",
+          "email": null,
+          "context": "Owner of Summit HVAC Solutions, handles primary after-hours emergency calls."
+        },
+        {
+          "name": "Danny",
+          "role": "Senior Tech",
+          "phone": "602-555-0178",
+          "email": null,
+          "context": "Senior technician, serves as backup for after-hours emergency calls."
+        },
+        {
+          "name": "Karen Wheeler",
+          "role": "Office Manager",
+          "phone": "602-555-0134",
+          "email": null,
+          "context": "Handles all dispatch for existing customers with service issues during business hours."
+        },
+        {
+          "name": "Rick",
+          "role": "Owner",
+          "phone": "602-555-0156",
+          "email": null,
+          "context": "First contact for emergency routing after hours and on holidays for existing customers. Also handles specific requests during business hours."
+        },
+        {
+          "name": "Danny",
+          "role": "Senior Tech",
+          "phone": "602-555-0178",
+          "email": null,
+          "context": "Second contact in the emergency routing escalation chain after hours."
+        },
+        {
+          "name": null,
+          "role": "Office",
+          "phone": null,
+          "email": "office@summithvacaz.com",
+          "context": "General office email."
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_supported",
+      "v1_value": [
+        "Commercial AC installation",
+        "Commercial AC repair",
+        "Residential AC installation",
+        "Residential AC repair",
+        "Heating system installation",
+        "Heating system repair",
+        "Ductwork installation",
+        "Ductwork cleaning",
+        "Thermostat and control systems",
+        "Preventive maintenance contracts",
+        "Indoor air quality services",
+        "Mini-split installations"
+      ],
+      "v2_value": [
+        "Commercial AC installation",
+        "Commercial AC repair",
+        "Residential AC installation",
+        "Residential AC repair",
+        "Heating system installation",
+        "Heating system repair",
+        "Ductwork installation",
+        "Ductwork cleaning",
+        "Thermostat and control systems",
+        "Preventive maintenance contracts",
+        "Indoor air quality services",
+        "Mini-split installations",
+        "Commercial AC installation and repair",
+        "Residential AC installation and repair",
+        "Commercial and residential heating installation and repair",
+        "Ductwork installation and cleaning",
+        "Thermostat and smart control system installation",
+        "Preventive maintenance contracts (Cool Club)",
+        "Indoor air quality services (air purification, humidity control)",
+        "Mini-split system installation",
+        "Rooftop unit service for commercial buildings",
+        "Refrigeration system repair for restaurants and commercial kitchens"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_excluded",
+      "v1_value": [],
+      "v2_value": [
+        "Window AC units",
+        "Plumbing beyond what's needed for HVAC",
+        "Electrical beyond what's needed for HVAC",
+        "Evaporative coolers",
+        "Duct cleaning for dryer vents"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_definition",
+      "v1_value": [
+        "Complete AC failure in a commercial building (restaurant, school, medical facility)",
+        "Gas leak situation",
+        "Refrigerant leaks",
+        "Carbon monoxide detector alerts related to HVAC",
+        "Anything affecting health and safety",
+        "Anything causing major business disruption"
+      ],
+      "v2_value": [
+        "Complete AC failure at any commercial property (restaurants, medical offices, schools, data centers)",
+        "Gas leaks or suspected gas leaks related to heating equipment",
+        "Carbon monoxide detector alerts related to HVAC systems",
+        "Refrigerant leaks",
+        "No-heat situations when outdoor temperature is below 40 degrees"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.order",
+      "v1_value": [
+        "Clara to identify emergency, then transfer to Rick's cell phone.",
+        "If Rick does not answer, transfer to Danny's cell phone."
+      ],
+      "v2_value": [
+        "transfer to Rick",
+        "transfer to Danny",
+        "take detailed message"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.timeout_seconds",
+      "v1_value": null,
+      "v2_value": 60,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.fallback_action",
+      "v1_value": null,
+      "v2_value": "Take a detailed message including name, business name, phone, address, exact system issue, and current temperature situation. Promise callback within 20 minutes.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.action",
+      "v1_value": "Clara to take a message for non-emergency after-hours calls.",
+      "v2_value": "Clara to answer calls, collect caller information, and inform them of callback.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.info_to_collect",
+      "v1_value": [
+        "name",
+        "phone_number",
+        "service_needed",
+        "existing_customer_status"
+      ],
+      "v2_value": [
+        "name",
+        "phone_number",
+        "service_type",
+        "address",
+        "existing_customer_status"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.callback_timeframe",
+      "v1_value": "Next business morning",
+      "v2_value": "First thing next business day.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.notes",
+      "v1_value": null,
+      "v2_value": "Existing customers receive priority callbacks.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.during_hours_transfer",
+      "v1_value": null,
+      "v2_value": "Karen Wheeler (602-555-0134) for existing customers with service issues; Rick's cell (602-555-0156) for specific requests for Rick.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.transfer_timeout_seconds",
+      "v1_value": null,
+      "v2_value": 30,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.transfer_fail_action",
+      "v1_value": null,
+      "v2_value": "Take a message.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "integration_constraints",
+      "v1_value": [
+        "Summit HVAC Solutions uses Housecall Pro for scheduling and dispatching. Clara should integrate with Housecall Pro for scheduling non-emergency appointments or logging service requests."
+      ],
+      "v2_value": [
+        "Clara does not need to integrate with Housecall Pro for scheduling."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "after_hours_flow_summary",
+      "v1_value": "During after-hours, Clara will first determine if the call is an emergency. If it is an emergency (e.g., complete AC failure in a commercial building, gas leak, refrigerant leak, carbon monoxide detector alert, or anything affecting health/safety or causing major business disruption), Clara will attempt to transfer the call to Rick (owner) at 602-555-0156. If Rick does not answer, Clara will then attempt to transfer to Danny (senior tech) at 602-555-0178. The goal is to have someone on-site within an hour for emergencies. For non-emergency after-hours calls, Clara will collect the caller's name, phone number, the type of service needed, and whether they are an existing customer. This message will be forwarded to Karen (office manager) for follow-up on the next business morning.",
+      "v2_value": "During after-hours, Clara will answer calls. If the call is identified as an emergency based on predefined criteria (e.g., complete AC failure at commercial property, gas leaks, CO alerts, refrigerant leaks, no-heat below 40 degrees), Clara will first attempt to transfer to Rick (602-555-0156) for 60 seconds. If Rick does not answer, Clara will then attempt to transfer to Danny (602-555-0178). If Danny also does not answer, Clara will take a detailed message, collecting the caller's name, business name, phone, address, the exact system issue, and the current temperature situation, promising a callback within 20 minutes. For non-emergency calls after hours, Clara will take a standard message, collecting the caller's name, phone number, type of service needed, address, and whether they are an existing customer. Existing customers will be flagged for priority callbacks. Callers will be informed that they will receive a callback first thing on the next business day. On major holidays, Rick will take emergency calls specifically for existing customers.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "office_hours_flow_summary",
+      "v1_value": "During office hours (Monday-Friday 6 AM-6 PM, and seasonally Saturdays 7 AM-2 PM), Clara is expected to answer calls, qualify the caller's intent, and handle inquiries. The transcript implies Clara will help manage the call volume that the two office staff cannot keep up with, suggesting Clara will act as a primary answering agent, potentially scheduling appointments or routing calls as needed, though specific routing for office hours is not detailed beyond the general problem of \"drowning in calls\".",
+      "v2_value": "During business hours, Clara will answer all incoming calls and qualify the caller's intent. For existing customers calling with service issues, Clara will attempt to transfer the call directly to Karen Wheeler (602-555-0134), who handles all dispatch. For new customers inquiring about quotes, Clara will collect their contact information and details about their service needs, and Karen will call them back. If a caller specifically asks to speak with Rick, Clara will attempt to transfer the call to Rick's cell phone (602-555-0156). If Rick does not answer within 30 seconds, Clara will take a detailed message. Special rules apply: during the summer months (June, July, August), Clara must never promise same-day service for non-emergencies, instead stating that scheduling will occur 'as soon as possible.' Cool Club members should be identified and flagged as a priority. In the event a caller mentions a gas smell, Clara must immediately instruct them to leave the property, call 911 first, and then call Summit HVAC.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "special_rules",
+      "v1_value": [
+        "Summit HVAC Solutions prioritizes commercial clients, especially for early morning service requests before businesses open.",
+        "On-site response for emergencies is targeted within one hour."
+      ],
+      "v2_value": [
+        "Never promise same-day service for non-emergencies during summer (June, July, August); Clara should state scheduling will be 'as soon as possible'.",
+        "Cool Club members should be flagged as priority.",
+        "If a gas smell is mentioned, immediately instruct the caller to leave the property, call 911 first, then call Summit HVAC.",
+        "Rick takes emergency calls on holidays for existing customers.",
+        "Summit HVAC Solutions is licensed in Arizona and Nevada."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "questions_or_unknowns",
+      "v1_value": [
+        "What is the specific routing logic for calls during office hours (e.g., transfer to Karen, schedule directly in Housecall Pro, etc.)?",
+        "What is the pricing for the Clara AI software?",
+        "Are there any specific commercial clients that should be treated as emergencies regardless of the issue type?",
+        "What is the timeout duration for transferring emergency calls before escalating to the next tier?"
+      ],
+      "v2_value": [],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "notes",
+      "v1_value": "Summit HVAC Solutions is a 15-year-old commercial and residential HVAC company located in Phoenix, Arizona. The company is owned by Rick, with his wife Karen managing the office. They are experiencing high call volumes, particularly during the brutal Arizona summers, leading to lost business due to slow response times. They currently use Housecall Pro for scheduling and dispatching. The AI agent Clara is being considered to help manage call overflow and ensure emergencies are handled promptly. Pricing for Clara was not discussed in this demo call. No information was provided regarding a second phone number or specific testing/kickoff dates.",
+      "v2_value": "Updated with onboarding data. Operational details confirmed.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "version",
+      "v1_value": null,
+      "v2_value": "v2",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v1_date",
+      "v1_value": null,
+      "v2_value": "2024-11-20",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v2_date",
+      "v1_value": null,
+      "v2_value": "2024-11-23",
+      "reason": "confirmed during onboarding call"
+    }
+  ],
+  "fields_unchanged": [
+    "account_id",
+    "call_transfer_rules.notes",
+    "company_name",
+    "emergency_routing_rules.escalation_chain",
+    "extraction_date",
+    "office_address"
+  ],
+  "questions_resolved": [
+    "What is the specific routing logic for calls during office hours (e.g., transfer to Karen, schedule directly in Housecall Pro, etc.)?",
+    "What is the pricing for the Clara AI software?",
+    "Are there any specific commercial clients that should be treated as emergencies regardless of the issue type?",
+    "What is the timeout duration for transferring emergency calls before escalating to the next tier?"
+  ],
+  "questions_still_open": []
+}

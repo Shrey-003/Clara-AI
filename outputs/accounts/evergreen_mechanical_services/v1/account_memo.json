@@ -1,0 +1,141 @@
+{
+  "account_id": "evergreen_mechanical_services",
+  "company_name": "Evergreen Mechanical Services",
+  "extraction_date": "2024-11-25",
+  "extraction_type": "demo",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start_time": "7 AM",
+    "end_time": "5:30 PM",
+    "timezone": "Mountain Time",
+    "seasonal_hours": "Looking at adding Saturday hours next year.",
+    "holiday_policy": null
+  },
+  "office_address": "1250 South Broadway, Unit 400, Denver, Colorado 80210",
+  "timezone": "Mountain Time",
+  "contact_info": [
+    {
+      "name": "Linda",
+      "role": "Office Manager",
+      "phone": null,
+      "email": null,
+      "context": "Monitors the dispatch line until 8 PM for after-hours emergencies and manages office operations."
+    },
+    {
+      "name": "Jake",
+      "role": "On-call Plumber",
+      "phone": "303-555-0134",
+      "email": null,
+      "context": "Primary contact for after-hours plumbing emergencies."
+    },
+    {
+      "name": "Steve",
+      "role": "HVAC Lead",
+      "phone": "303-555-0156",
+      "email": null,
+      "context": "Primary contact for after-hours HVAC emergencies."
+    },
+    {
+      "name": "Tom",
+      "role": "Owner",
+      "phone": "303-555-0112",
+      "email": null,
+      "context": "Final backup contact for all after-hours emergencies."
+    }
+  ],
+  "services_supported": [
+    "Commercial plumbing (new construction and repair)",
+    "HVAC installation, maintenance, and repair",
+    "Boiler service and repair",
+    "Water heater installation and service",
+    "Drain cleaning and sewer services",
+    "Backflow testing and certification",
+    "Hydronic heating systems",
+    "Tenant improvement build-outs (plumbing and HVAC portion)",
+    "Light electrical"
+  ],
+  "services_excluded": [],
+  "emergency_definition": [
+    "Burst pipes",
+    "Major water leaks",
+    "Sewer backups",
+    "Gas leaks",
+    "No heat situations in winter when it's below freezing",
+    "Complete loss of hot water at a large facility",
+    "HVAC failures in server rooms or medical facilities"
+  ],
+  "emergency_routing_rules": {
+    "escalation_chain": [
+      {
+        "tier": 1,
+        "name": "Linda (Dispatch Line)",
+        "phone": null
+      },
+      {
+        "tier": 2,
+        "name": "Jake (On-call Plumber)",
+        "phone": "303-555-0134"
+      },
+      {
+        "tier": 2,
+        "name": "Steve (HVAC Lead)",
+        "phone": "303-555-0156"
+      },
+      {
+        "tier": 3,
+        "name": "Tom (Owner)",
+        "phone": "303-555-0112"
+      }
+    ],
+    "order": [
+      "Attempt to reach dispatch line (monitored by Linda until 8 PM)",
+      "If plumbing emergency, attempt to reach on-call plumber Jake",
+      "If HVAC emergency, attempt to reach HVAC lead Steve",
+      "If no response from Jake or Steve, attempt to reach owner Tom"
+    ],
+    "timeout_seconds": null,
+    "fallback_action": null
+  },
+  "non_emergency_routing_rules": {
+    "action": "Clara to answer calls, qualify intent, and provide general information. For non-emergency service requests, Clara will collect necessary information and inform the caller that someone will call them back during business hours.",
+    "info_to_collect": [
+      "name",
+      "phone_number",
+      "nature_of_issue"
+    ],
+    "callback_timeframe": "During business hours",
+    "notes": null
+  },
+  "call_transfer_rules": {
+    "during_hours_transfer": null,
+    "transfer_timeout_seconds": null,
+    "transfer_fail_action": null,
+    "notes": []
+  },
+  "integration_constraints": [
+    "Integration with FieldEdge for dispatching and job tracking.",
+    "AI agent must not promise specific arrival times for technicians; instead, use phrases like 'we'll get someone out as soon as possible'."
+  ],
+  "after_hours_flow_summary": "During after-hours (weekends and Monday-Friday after 5:30 PM Mountain Time), Clara will identify if the call is an emergency based on predefined triggers (burst pipes, major water leaks, sewer backups, gas leaks, no heat in winter below freezing, complete loss of hot water at large facility, HVAC failures in server rooms/medical facilities). If it's an emergency, the call will first attempt to reach the dispatch line (monitored by Linda until 8 PM). After 8 PM, or if the dispatch line is unresponsive, plumbing emergencies will be routed to Jake at 303-555-0134, and HVAC emergencies to Steve at 303-555-0156. If neither Jake nor Steve responds, the call will escalate to Tom, the owner, at 303-555-0112. Non-emergency calls after hours will be handled by Clara collecting information for a callback during business hours.",
+  "office_hours_flow_summary": "During business hours (Monday-Friday, 7 AM to 5:30 PM Mountain Time), Clara will answer incoming calls, qualify the caller's intent, and determine if it's an emergency or a routine service request. For routine inquiries, Clara will collect necessary information (name, phone number, nature of issue) for the office staff (Linda, Rachel, Amy) to follow up. Clara will ensure not to promise specific arrival times for technicians, instead using phrases like 'we'll get someone out as soon as possible'. The goal is to reduce the call volume handled by the office staff, allowing them to focus on dispatching and billing.",
+  "special_rules": [
+    "AI agent must not promise specific arrival times for technicians; instead, use phrases like 'we'll get someone out as soon as possible'.",
+    "Emergency routing is separated by trade (plumbing vs. HVAC).",
+    "Weekends are closed except for emergencies."
+  ],
+  "questions_or_unknowns": [
+    "What is the exact process for non-emergency calls after hours? (e.g., voicemail, information collection only, specific message)",
+    "What is the desired timeout for each tier in the emergency escalation chain before moving to the next contact?",
+    "What is the exact routing for calls during office hours that Clara cannot resolve (e.g., transfer to Linda/Rachel/Amy)?",
+    "What is the pricing for the Clara software?",
+    "Are there any specific holiday policies?",
+    "What is the plan for the potential Saturday hours next year?"
+  ],
+  "notes": "Evergreen Mechanical Services is a full-service mechanical contractor based in Denver, Colorado, specializing in plumbing, HVAC, and light electrical for commercial properties (apartment complexes, office buildings, retail spaces). They have been in business for 20 years. The company currently experiences overwhelming call volumes (60-70 calls/day during busy season) and struggles with after-hours calls using an old answering service that lacks qualification capabilities. The corporate structure includes Tom (Owner), Linda (Office Manager), and two other office staff members, Rachel and Amy. They utilize FieldEdge for dispatching and job tracking. A specific 'dispatch line' is mentioned, which Linda monitors until 8 PM for emergencies. There was no mention of Jobber or QuickBooks usage. The AI solution, Clara, is intended to alleviate call volume and improve after-hours emergency handling. Pricing for the Clara software was not discussed in this transcript. An onboarding call will be scheduled following agreement."
+}

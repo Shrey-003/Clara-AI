@@ -1,0 +1,180 @@
+{
+  "account_id": "patriot_fire_protection",
+  "company_name": "Patriot Fire Protection",
+  "extraction_date": "2024-11-18",
+  "extraction_type": "onboarding_update",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "start_time": "8 AM",
+    "end_time": "6 PM",
+    "timezone": "Central Time",
+    "seasonal_hours": "Saturday crew from 8 AM to 12 PM for scheduled inspections only; no new intake on Saturdays.",
+    "holiday_policy": null
+  },
+  "office_address": "8900 Westheimer Road, Suite 150, Houston, Texas 77063",
+  "timezone": "Central Time",
+  "contact_info": [
+    {
+      "name": "Carlos",
+      "role": "Dispatcher",
+      "phone": "713-555-0234",
+      "email": null,
+      "context": "Primary contact for 24/7 emergency line, first tier of escalation."
+    },
+    {
+      "name": "Luis",
+      "role": "On-call Technician",
+      "phone": "713-555-0298",
+      "email": null,
+      "context": "Current on-call technician, second tier of emergency escalation if Carlos doesn't answer."
+    },
+    {
+      "name": "Dave Martinez",
+      "role": "Operations Manager",
+      "phone": "713-555-0256",
+      "email": "dave@patriotfireprotection.com",
+      "context": "Fallback contact for emergency routing."
+    },
+    {
+      "name": "Carlos",
+      "role": "Dispatcher",
+      "phone": "713-555-0234",
+      "email": null,
+      "context": "First tier contact for emergency routing."
+    },
+    {
+      "name": "Luis",
+      "role": "On-call Technician",
+      "phone": "713-555-0298",
+      "email": null,
+      "context": "Second tier contact for emergency routing. This number rotates weekly and needs to be updated."
+    },
+    {
+      "name": null,
+      "role": "General Inquiries",
+      "phone": null,
+      "email": "info@patriotfireprotection.com",
+      "context": "General email for business inquiries."
+    }
+  ],
+  "services_supported": [
+    "fire sprinkler system installation",
+    "fire sprinkler system repair",
+    "fire sprinkler system inspection",
+    "fire alarm system installation",
+    "fire alarm system monitoring",
+    "fire extinguisher sales",
+    "fire extinguisher servicing",
+    "fire extinguisher inspection",
+    "kitchen hood suppression systems",
+    "backflow preventer testing",
+    "Fire sprinkler system installation",
+    "Fire sprinkler system repair",
+    "Fire sprinkler system testing",
+    "Fire sprinkler system inspection",
+    "Fire alarm system installation",
+    "Fire alarm system repair",
+    "Fire alarm system monitoring coordination",
+    "Fire extinguisher sales",
+    "Fire extinguisher service",
+    "Fire extinguisher annual inspections",
+    "Kitchen hood suppression system installation",
+    "Kitchen hood suppression system service",
+    "Backflow preventer testing",
+    "Backflow preventer certification",
+    "Fire pump testing",
+    "Fire pump maintenance",
+    "Emergency light inspection",
+    "Emergency light replacement",
+    "Exit sign inspection",
+    "Exit sign replacement",
+    "Free estimates for commercial fire protection services"
+  ],
+  "services_excluded": [
+    "Residential fire alarms",
+    "Security alarm systems",
+    "HVAC",
+    "Plumbing",
+    "Calls from outside Texas and Louisiana"
+  ],
+  "emergency_definition": [
+    "Active fire sprinkler system leaks",
+    "Fire sprinkler head breaks or discharges",
+    "Fire alarm system malfunctions causing false alarms that won't stop",
+    "Complete fire alarm panel failures leaving a building unprotected",
+    "Any situation where a fire suppression system has activated",
+    "Kitchen hood suppression system discharges",
+    "Monitoring company calls (e.g., ADT, SimpliSafe, any third-party)"
+  ],
+  "emergency_routing_rules": {
+    "escalation_chain": [
+      {
+        "tier": 1,
+        "name": "Carlos (Dispatcher)",
+        "phone": "713-555-0234"
+      },
+      {
+        "tier": 2,
+        "name": "On-call Technician (Luis)",
+        "phone": "713-555-0298"
+      },
+      {
+        "tier": 3,
+        "name": "Dave Martinez (Operations Manager)",
+        "phone": "713-555-0256"
+      }
+    ],
+    "order": [
+      "Transfer to Carlos (Dispatcher)",
+      "If no answer, transfer to On-call Technician",
+      "If no answer, transfer to Dave Martinez (Operations Manager)"
+    ],
+    "timeout_seconds": 45,
+    "fallback_action": "If no one picks up after all three attempts, collect caller's name, number, property address, and exact nature of the alarm or leak. Inform caller that someone WILL call back within 10 minutes. Send a simultaneous text notification to Dave, Carlos, and the on-call technician."
+  },
+  "non_emergency_routing_rules": {
+    "action": "Clara is to take a message for all non-emergency inquiries.",
+    "info_to_collect": [
+      "name",
+      "company_name",
+      "phone_number",
+      "property_address",
+      "type_of_service_needed"
+    ],
+    "callback_timeframe": "Next business day",
+    "notes": "Clara should never promise a response time for non-emergencies. For Saturday new intake, take a message and handle it Monday."
+  },
+  "call_transfer_rules": {
+    "during_hours_transfer": "Monitoring company calls (e.g., ADT, SimpliSafe, any third-party) should be treated as priority calls and transferred immediately to an appropriate internal contact (likely Carlos or the on-call technician).",
+    "transfer_timeout_seconds": null,
+    "transfer_fail_action": null,
+    "notes": [
+      "Monitoring company calls are considered emergencies and require immediate transfer."
+    ]
+  },
+  "integration_constraints": [
+    "Clara should never create sprinkler jobs in ServiceTrade. This process must be done manually by the Patriot Fire Protection team due to specific job type classification requirements."
+  ],
+  "after_hours_flow_summary": "During after-hours, Clara will first determine if the call is an emergency. If it is an emergency, Clara will attempt to transfer the call sequentially to Carlos (45 seconds timeout), then the on-call technician (45 seconds timeout), and finally Dave Martinez (45 seconds timeout). If no one answers, Clara will collect the caller's name, number, property address, and the exact nature of the alarm or leak, assuring them someone will call back within 10 minutes, and then send a simultaneous text notification to Dave, Carlos, and the on-call technician. If the call is a non-emergency, Clara will collect the caller's name, company name (if applicable), phone number, property address, and the type of service needed, informing them that they will receive a callback the next business day.",
+  "office_hours_flow_summary": "During office hours (Monday-Friday, 8 AM-6 PM Central Time), Clara will handle calls. For emergencies, the routing follows the same escalation chain as after-hours emergencies. For non-emergencies, Clara will collect necessary information (name, company, phone, address, service type) and inform the caller they will be called back, mentioning free estimates for commercial services. On Saturdays (8 AM-12 PM), Clara will only process calls for scheduled inspections. Any new intake requests on Saturday will be handled as non-emergencies, with Clara taking a message and informing the caller it will be addressed on Monday. Monitoring company calls are considered priority and will be immediately transferred to an appropriate internal contact.",
+  "special_rules": [
+    "Patriot Fire Protection is licensed only in Texas and Louisiana; calls from outside these states should be politely declined.",
+    "Clara can mention that free estimates are offered for commercial fire protection services.",
+    "Clara must never promise a response time for non-emergencies.",
+    "For emergencies, Clara can state that the aim is for a 30-minute response.",
+    "Monitoring company calls (e.g., ADT, SimpliSafe, any third-party) are priority calls and must be transferred immediately, even during business hours.",
+    "Saturday hours (8 AM - 12 PM) are strictly for scheduled inspections; new intake requests received on Saturday should be messaged and handled on Monday."
+  ],
+  "questions_or_unknowns": [],
+  "notes": "Updated with onboarding data. Operational details confirmed.",
+  "version": "v2",
+  "v1_date": "2024-11-18",
+  "v2_date": "2024-11-21"
+}

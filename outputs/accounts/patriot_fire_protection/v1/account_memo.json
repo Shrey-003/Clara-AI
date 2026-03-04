@@ -1,0 +1,114 @@
+{
+  "account_id": "patriot_fire_protection",
+  "company_name": "Patriot Fire Protection",
+  "extraction_date": "2024-11-18",
+  "extraction_type": "demo",
+  "business_hours": {
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "start_time": "8 AM",
+    "end_time": "6 PM",
+    "timezone": "Central Time",
+    "seasonal_hours": "Saturday crew works 8 AM to 12 PM for scheduled inspections only.",
+    "holiday_policy": null
+  },
+  "office_address": "8900 Westheimer Road, Suite 150, Houston, Texas 77063",
+  "timezone": "Central Time",
+  "contact_info": [
+    {
+      "name": "Carlos",
+      "role": "Dispatcher",
+      "phone": "713-555-0234",
+      "email": null,
+      "context": "Primary contact for 24/7 emergency line, first tier of escalation."
+    },
+    {
+      "name": "Luis",
+      "role": "On-call Technician",
+      "phone": "713-555-0298",
+      "email": null,
+      "context": "Current on-call technician, second tier of emergency escalation if Carlos doesn't answer."
+    }
+  ],
+  "services_supported": [
+    "fire sprinkler system installation",
+    "fire sprinkler system repair",
+    "fire sprinkler system inspection",
+    "fire alarm system installation",
+    "fire alarm system monitoring",
+    "fire extinguisher sales",
+    "fire extinguisher servicing",
+    "fire extinguisher inspection",
+    "kitchen hood suppression systems",
+    "backflow preventer testing"
+  ],
+  "services_excluded": [],
+  "emergency_definition": [
+    "Fire sprinkler leaks",
+    "fire alarm malfunctions",
+    "any active fire suppression situation",
+    "burst sprinkler head (e.g., at a hospital)"
+  ],
+  "emergency_routing_rules": {
+    "escalation_chain": [
+      {
+        "tier": 1,
+        "name": "Carlos",
+        "phone": "713-555-0234"
+      },
+      {
+        "tier": 2,
+        "name": "Luis",
+        "phone": "713-555-0298"
+      }
+    ],
+    "order": [
+      "transfer to Carlos (Dispatcher)",
+      "if Carlos does not pick up within 45 seconds, roll to Luis (On-call Technician)"
+    ],
+    "timeout_seconds": 45,
+    "fallback_action": null
+  },
+  "non_emergency_routing_rules": {
+    "action": "Clara to answer calls, qualify intent, collect caller information, and inform them that their request will be handled the next business day.",
+    "info_to_collect": [
+      "name",
+      "phone_number",
+      "reason_for_call"
+    ],
+    "callback_timeframe": "next business day",
+    "notes": "Many non-emergency calls are for inspection scheduling requests."
+  },
+  "call_transfer_rules": {
+    "during_hours_transfer": null,
+    "transfer_timeout_seconds": 45,
+    "transfer_fail_action": null,
+    "notes": [
+      "Transfer timeout and fail action rules apply specifically to after-hours emergency routing."
+    ]
+  },
+  "integration_constraints": [
+    "Patriot Fire Protection uses ServiceTrade for job management, specifically for tracking inspections and recurring services.",
+    "Automated systems (like Clara) must NOT create sprinkler jobs in ServiceTrade; these must be created manually by the Patriot Fire Protection team due to their complex job types."
+  ],
+  "after_hours_flow_summary": "During after-hours (outside of Monday-Friday 8 AM - 6 PM CT, and Saturday 8 AM - 12 PM CT), Clara will first triage the call to determine if it's an emergency. If it's an emergency (e.g., fire sprinkler leak, fire alarm malfunction, active fire suppression situation), Clara will immediately transfer the call to the 24/7 emergency line, first attempting to reach dispatcher Carlos (713-555-0234). If Carlos does not answer within 45 seconds, the call will automatically roll over to the on-call technician, currently Luis (713-555-0298). For non-emergency after-hours calls, Clara will collect the caller's name, phone number, and the reason for their call (e.g., inspection scheduling request), informing them that their request will be handled the next business day.",
+  "office_hours_flow_summary": "During office hours (Monday-Friday, 8 AM - 6 PM CT), Clara is expected to handle incoming non-emergency calls, such as inspection scheduling requests and general inquiries. She will qualify the caller's intent, collect necessary information (name, phone number, reason for call), and inform them that their request will be processed by the office staff. This aims to reduce the call volume handled by the three existing office staff, allowing them to focus on critical tasks, vendor calls, and actual emergencies. Clara will not create sprinkler jobs in ServiceTrade.",
+  "special_rules": [
+    "Automated systems must not create sprinkler jobs in ServiceTrade; these must be created manually by the Patriot Fire Protection team.",
+    "Saturday hours (8 AM - 12 PM CT) are specifically for scheduled inspections only."
+  ],
+  "questions_or_unknowns": [
+    "What is the fallback action if the on-call technician (Luis) does not pick up during an emergency transfer?",
+    "Is there a specific list of 'critical clients' or is the 'hospital' example indicative of any critical infrastructure client?",
+    "What is the pricing for the AI software?",
+    "What is the corporate structure of Patriot Fire Protection?",
+    "Are there any specific requirements for a 2nd phone number status?",
+    "What are the planned testing or kickoff dates for Clara?"
+  ],
+  "notes": "Patriot Fire Protection is an 8-year-old commercial fire protection company based in Houston, Texas. They specialize in fire sprinkler systems, fire alarms, fire extinguisher services, kitchen hood suppression systems, and backflow preventer testing for commercial properties. They are seeking an AI answering solution because their three office staff are overwhelmed with call volume, leading to missed critical calls, such as a recent incident involving a hospital with a burst sprinkler head. They currently use ServiceTrade for job management, particularly for tracking inspections and recurring services. A key operational constraint is that automated systems, including Clara, must not create sprinkler jobs in ServiceTrade due to the complexity of these job types; such tasks must be handled manually by their team. The AI agent, Clara, is intended to triage calls, especially for emergencies, and collect detailed information for non-emergencies to alleviate the burden on their staff. Pricing for the AI software was not discussed in this demo call. No information regarding corporate structure, 2nd phone number status, or specific testing/kickoff dates was provided in the transcript."
+}

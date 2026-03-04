@@ -1,0 +1,424 @@
+{
+  "account_id": "evergreen_mechanical_services",
+  "changed_at": "2026-03-04T14:28:56.464Z",
+  "changes": [
+    {
+      "field": "extraction_type",
+      "v1_value": "demo",
+      "v2_value": "onboarding_update",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.seasonal_hours",
+      "v1_value": "Looking at adding Saturday hours next year.",
+      "v2_value": "Tom mentioned possibly adding Saturday hours next year but NOT yet. Do not configure Saturday hours.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.holiday_policy",
+      "v1_value": null,
+      "v2_value": "Closed weekends except for emergencies.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "contact_info",
+      "v1_value": [
+        {
+          "name": "Linda",
+          "role": "Office Manager",
+          "phone": null,
+          "email": null,
+          "context": "Monitors the dispatch line until 8 PM for after-hours emergencies and manages office operations."
+        },
+        {
+          "name": "Jake",
+          "role": "On-call Plumber",
+          "phone": "303-555-0134",
+          "email": null,
+          "context": "Primary contact for after-hours plumbing emergencies."
+        },
+        {
+          "name": "Steve",
+          "role": "HVAC Lead",
+          "phone": "303-555-0156",
+          "email": null,
+          "context": "Primary contact for after-hours HVAC emergencies."
+        },
+        {
+          "name": "Tom",
+          "role": "Owner",
+          "phone": "303-555-0112",
+          "email": null,
+          "context": "Final backup contact for all after-hours emergencies."
+        }
+      ],
+      "v2_value": [
+        {
+          "name": "Linda",
+          "role": "Office Manager",
+          "phone": null,
+          "email": null,
+          "context": "Monitors the dispatch line until 8 PM for after-hours emergencies and manages office operations."
+        },
+        {
+          "name": "Jake",
+          "role": "On-call Plumber",
+          "phone": "303-555-0134",
+          "email": null,
+          "context": "Primary contact for after-hours plumbing emergencies."
+        },
+        {
+          "name": "Steve",
+          "role": "HVAC Lead",
+          "phone": "303-555-0156",
+          "email": null,
+          "context": "Primary contact for after-hours HVAC emergencies."
+        },
+        {
+          "name": "Tom",
+          "role": "Owner",
+          "phone": "303-555-0112",
+          "email": null,
+          "context": "Final backup contact for all after-hours emergencies."
+        },
+        {
+          "name": "Linda Chen",
+          "role": "Office Manager",
+          "phone": "303-555-0189",
+          "email": "office@evergreenmech.com",
+          "context": "Primary contact for incoming calls and dispatch coordination during business hours and until 8 PM on business days."
+        },
+        {
+          "name": "Tom Chen",
+          "role": "Owner",
+          "phone": "303-555-0112",
+          "email": "tom@evergreenmech.com",
+          "context": "Handles all gas leak calls personally, final escalation for all other emergencies, and direct calls from clients asking for him."
+        },
+        {
+          "name": "Jake",
+          "role": "On-call Plumber",
+          "phone": "303-555-0134",
+          "email": null,
+          "context": "First point of contact for plumbing emergencies after hours."
+        },
+        {
+          "name": "Steve",
+          "role": "HVAC Lead",
+          "phone": "303-555-0156",
+          "email": null,
+          "context": "First point of contact for HVAC emergencies after hours."
+        },
+        {
+          "name": "Amy",
+          "role": "Accounting",
+          "phone": null,
+          "email": null,
+          "context": "Handles billing-related inquiries."
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_supported",
+      "v1_value": [
+        "Commercial plumbing (new construction and repair)",
+        "HVAC installation, maintenance, and repair",
+        "Boiler service and repair",
+        "Water heater installation and service",
+        "Drain cleaning and sewer services",
+        "Backflow testing and certification",
+        "Hydronic heating systems",
+        "Tenant improvement build-outs (plumbing and HVAC portion)",
+        "Light electrical"
+      ],
+      "v2_value": [
+        "Commercial plumbing (new construction and repair)",
+        "HVAC installation, maintenance, and repair",
+        "Boiler service and repair",
+        "Water heater installation and service",
+        "Drain cleaning and sewer services",
+        "Backflow testing and certification",
+        "Hydronic heating systems",
+        "Tenant improvement build-outs (plumbing and HVAC portion)",
+        "Light electrical",
+        "HVAC installation, maintenance, and repair (commercial and some residential)",
+        "Boiler service, repair, and installation",
+        "Water heater installation and repair (tank and tankless)",
+        "Hydronic heating system installation and service",
+        "Radiant floor heating",
+        "Tenant improvement buildouts (plumbing, HVAC, and hydronic portions)",
+        "Preventive maintenance contracts (plumbing and HVAC)",
+        "Colorado Master Plumber and HVAC contractor (licensed and insured)"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_excluded",
+      "v1_value": [],
+      "v2_value": [
+        "Residential plumbing for homeowners",
+        "Excavation or sewer line replacement",
+        "Fire suppression or fire sprinkler work",
+        "Electrical work",
+        "Well pumps"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_definition",
+      "v1_value": [
+        "Burst pipes",
+        "Major water leaks",
+        "Sewer backups",
+        "Gas leaks",
+        "No heat situations in winter when it's below freezing",
+        "Complete loss of hot water at a large facility",
+        "HVAC failures in server rooms or medical facilities"
+      ],
+      "v2_value": [
+        "Burst or broken water pipes causing active flooding",
+        "Major water leaks from plumbing systems",
+        "Sewer backups or overflows",
+        "Gas leaks or suspected gas leaks",
+        "No-heat situations when outdoor temperature is below 32 degrees Fahrenheit",
+        "Complete loss of hot water at large facilities (apartment complexes or hotels)",
+        "HVAC failures in critical environments (server rooms, medical facilities, laboratories)",
+        "Boiler failures during heating season",
+        "Frozen pipes that haven't burst yet but need immediate attention to prevent bursting"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.escalation_chain",
+      "v1_value": [
+        {
+          "tier": 1,
+          "name": "Linda (Dispatch Line)",
+          "phone": null
+        },
+        {
+          "tier": 2,
+          "name": "Jake (On-call Plumber)",
+          "phone": "303-555-0134"
+        },
+        {
+          "tier": 2,
+          "name": "Steve (HVAC Lead)",
+          "phone": "303-555-0156"
+        },
+        {
+          "tier": 3,
+          "name": "Tom (Owner)",
+          "phone": "303-555-0112"
+        }
+      ],
+      "v2_value": [
+        {
+          "tier": 1,
+          "name": "Jake",
+          "phone": "303-555-0134"
+        },
+        {
+          "tier": 1,
+          "name": "Steve",
+          "phone": "303-555-0156"
+        },
+        {
+          "tier": 2,
+          "name": "Tom Chen",
+          "phone": "303-555-0112"
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.order",
+      "v1_value": [
+        "Attempt to reach dispatch line (monitored by Linda until 8 PM)",
+        "If plumbing emergency, attempt to reach on-call plumber Jake",
+        "If HVAC emergency, attempt to reach HVAC lead Steve",
+        "If no response from Jake or Steve, attempt to reach owner Tom"
+      ],
+      "v2_value": [
+        "For plumbing emergencies (burst pipes, water leaks, sewer, frozen pipes), attempt to transfer to Jake (on-call plumber) at 303-555-0134 for 30 seconds.",
+        "For HVAC emergencies (no heat, AC failure in critical areas, boiler issues), attempt to transfer to Steve (HVAC lead) at 303-555-0156 for 30 seconds.",
+        "For gas leaks, Clara must immediately instruct the caller to evacuate the building, not flip any light switches, not use the phone inside, get outside, and call 911 from outside FIRST. After this safety message, Clara should attempt to transfer to Tom Chen (Owner) at 303-555-0112.",
+        "If Jake or Steve do not answer within 30 seconds, escalate to Tom Chen (Owner) at 303-555-0112 as backup for all emergencies.",
+        "If Tom Chen does not answer after all attempts, take a detailed message."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.timeout_seconds",
+      "v1_value": null,
+      "v2_value": 30,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.fallback_action",
+      "v1_value": null,
+      "v2_value": "If no one answers after all attempts, take a detailed message including the exact issue, property address, and property manager contact (if known). Send text alerts to Tom Chen, Linda Chen, and the relevant on-call technician (Jake or Steve depending on the trade).",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.action",
+      "v1_value": "Clara to answer calls, qualify intent, and provide general information. For non-emergency service requests, Clara will collect necessary information and inform the caller that someone will call them back during business hours.",
+      "v2_value": "Clara is to collect specific information from the caller.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.info_to_collect",
+      "v1_value": [
+        "name",
+        "phone_number",
+        "nature_of_issue"
+      ],
+      "v2_value": [
+        "name",
+        "phone_number",
+        "company_name (if commercial client)",
+        "property_address",
+        "type_of_issue (plumbing, HVAC, or other)",
+        "urgency (urgent for next business day or can wait)"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.callback_timeframe",
+      "v1_value": "During business hours",
+      "v2_value": "We will call back in the morning (next business day).",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.notes",
+      "v1_value": null,
+      "v2_value": "Clara should never promise a specific arrival time. Instead, use phrases like 'we'll dispatch someone as soon as possible'.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.during_hours_transfer",
+      "v1_value": null,
+      "v2_value": "Linda Chen (Office Manager) at 303-555-0189",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.transfer_timeout_seconds",
+      "v1_value": null,
+      "v2_value": 20,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.transfer_fail_action",
+      "v1_value": null,
+      "v2_value": "Take a message for Linda Chen, and she will call back within 30 minutes.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.notes",
+      "v1_value": [],
+      "v2_value": [
+        "For clients specifically asking for Tom Chen, Clara should attempt to transfer to his cell at 303-555-0112.",
+        "For anything billing-related, Clara should take a message and note it is for Amy in accounting."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "integration_constraints",
+      "v1_value": [
+        "Integration with FieldEdge for dispatching and job tracking.",
+        "AI agent must not promise specific arrival times for technicians; instead, use phrases like 'we'll get someone out as soon as possible'."
+      ],
+      "v2_value": [
+        "Evergreen Mechanical Services uses FieldEdge for dispatching and job tracking.",
+        "No Clara integration with FieldEdge is needed or desired.",
+        "Clara should not attempt to book jobs or access Evergreen Mechanical's schedule.",
+        "Clara's role is to collect information; scheduling is handled manually by Evergreen Mechanical staff."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "after_hours_flow_summary",
+      "v1_value": "During after-hours (weekends and Monday-Friday after 5:30 PM Mountain Time), Clara will identify if the call is an emergency based on predefined triggers (burst pipes, major water leaks, sewer backups, gas leaks, no heat in winter below freezing, complete loss of hot water at large facility, HVAC failures in server rooms/medical facilities). If it's an emergency, the call will first attempt to reach the dispatch line (monitored by Linda until 8 PM). After 8 PM, or if the dispatch line is unresponsive, plumbing emergencies will be routed to Jake at 303-555-0134, and HVAC emergencies to Steve at 303-555-0156. If neither Jake nor Steve responds, the call will escalate to Tom, the owner, at 303-555-0112. Non-emergency calls after hours will be handled by Clara collecting information for a callback during business hours.",
+      "v2_value": "During after-hours (outside Mon-Fri, 7 AM-5:30 PM MT, and after 8 PM on business days, or all day weekends), Clara will first determine if the call is an emergency. If it's a gas leak, Clara will immediately deliver a critical safety message (evacuate, call 911) before attempting to transfer to Tom Chen. For other emergencies, Clara will follow the conditional emergency routing rules, attempting to reach Jake for plumbing issues or Steve for HVAC issues, with Tom Chen as the final escalation. If no one answers, Clara will take a detailed message and send text alerts to Tom, Linda, and the relevant on-call tech. For non-emergency calls after hours, Clara will collect the caller's name, phone number, company name (if commercial), property address, type of issue, and urgency, informing them that Evergreen Mechanical will call back the next business morning. On weekends, Linda Chen is skipped entirely for all calls, going straight to on-call techs and Tom for emergencies.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "office_hours_flow_summary",
+      "v1_value": "During business hours (Monday-Friday, 7 AM to 5:30 PM Mountain Time), Clara will answer incoming calls, qualify the caller's intent, and determine if it's an emergency or a routine service request. For routine inquiries, Clara will collect necessary information (name, phone number, nature of issue) for the office staff (Linda, Rachel, Amy) to follow up. Clara will ensure not to promise specific arrival times for technicians, instead using phrases like 'we'll get someone out as soon as possible'. The goal is to reduce the call volume handled by the office staff, allowing them to focus on dispatching and billing.",
+      "v2_value": "During office hours (Monday through Friday, 7 AM to 5:30 PM Mountain Time), Clara will primarily attempt to transfer all incoming calls to Linda Chen (Office Manager) at 303-555-0189. If Linda does not answer within 20 seconds, Clara will take a message, and Linda will commit to calling back within 30 minutes. For clients specifically requesting Tom Chen, Clara will attempt to transfer to his cell at 303-555-0112. For billing-related inquiries, Clara will take a message for Amy in accounting. If an emergency call comes in during office hours, Clara will follow the same emergency routing rules as after-hours, attempting to reach the appropriate on-call technician (Jake or Steve) or Tom Chen for gas leaks, with Tom as the general backup.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "special_rules",
+      "v1_value": [
+        "AI agent must not promise specific arrival times for technicians; instead, use phrases like 'we'll get someone out as soon as possible'.",
+        "Emergency routing is separated by trade (plumbing vs. HVAC).",
+        "Weekends are closed except for emergencies."
+      ],
+      "v2_value": [
+        "Clara must never promise a specific arrival time for technicians. Instead, use phrases like 'we'll dispatch someone as soon as possible'.",
+        "For calls reporting a gas smell, Clara must immediately interrupt the call to deliver a critical safety message: 'Leave the building, don't flip any light switches, don't use the phone inside, get outside, call 911 from outside, and THEN we can help.' This is a priority override.",
+        "Do not configure Saturday hours at this time, as they are not yet implemented by Evergreen Mechanical Services."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "questions_or_unknowns",
+      "v1_value": [
+        "What is the exact process for non-emergency calls after hours? (e.g., voicemail, information collection only, specific message)",
+        "What is the desired timeout for each tier in the emergency escalation chain before moving to the next contact?",
+        "What is the exact routing for calls during office hours that Clara cannot resolve (e.g., transfer to Linda/Rachel/Amy)?",
+        "What is the pricing for the Clara software?",
+        "Are there any specific holiday policies?",
+        "What is the plan for the potential Saturday hours next year?"
+      ],
+      "v2_value": [],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "notes",
+      "v1_value": "Evergreen Mechanical Services is a full-service mechanical contractor based in Denver, Colorado, specializing in plumbing, HVAC, and light electrical for commercial properties (apartment complexes, office buildings, retail spaces). They have been in business for 20 years. The company currently experiences overwhelming call volumes (60-70 calls/day during busy season) and struggles with after-hours calls using an old answering service that lacks qualification capabilities. The corporate structure includes Tom (Owner), Linda (Office Manager), and two other office staff members, Rachel and Amy. They utilize FieldEdge for dispatching and job tracking. A specific 'dispatch line' is mentioned, which Linda monitors until 8 PM for emergencies. There was no mention of Jobber or QuickBooks usage. The AI solution, Clara, is intended to alleviate call volume and improve after-hours emergency handling. Pricing for the Clara software was not discussed in this transcript. An onboarding call will be scheduled following agreement.",
+      "v2_value": "Updated with onboarding data. Operational details confirmed.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "version",
+      "v1_value": null,
+      "v2_value": "v2",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v1_date",
+      "v1_value": null,
+      "v2_value": "2024-11-25",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v2_date",
+      "v1_value": null,
+      "v2_value": "2024-11-28",
+      "reason": "confirmed during onboarding call"
+    }
+  ],
+  "fields_unchanged": [
+    "account_id",
+    "business_hours.days",
+    "business_hours.end_time",
+    "business_hours.start_time",
+    "business_hours.timezone",
+    "company_name",
+    "extraction_date",
+    "office_address",
+    "timezone"
+  ],
+  "questions_resolved": [
+    "What is the exact process for non-emergency calls after hours? (e.g., voicemail, information collection only, specific message)",
+    "What is the desired timeout for each tier in the emergency escalation chain before moving to the next contact?",
+    "What is the exact routing for calls during office hours that Clara cannot resolve (e.g., transfer to Linda/Rachel/Amy)?",
+    "What is the pricing for the Clara software?",
+    "Are there any specific holiday policies?",
+    "What is the plan for the potential Saturday hours next year?"
+  ],
+  "questions_still_open": []
+}

@@ -1,0 +1,360 @@
+{
+  "account_id": "coastal_alarm_systems",
+  "changed_at": "2026-03-04T14:28:28.612Z",
+  "changes": [
+    {
+      "field": "extraction_type",
+      "v1_value": "demo",
+      "v2_value": "onboarding_update",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "business_hours.holiday_policy",
+      "v1_value": null,
+      "v2_value": "Observe major holidays but flexible for high-priority clients.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "contact_info",
+      "v1_value": [
+        {
+          "name": "Maria",
+          "role": "Receptionist",
+          "phone": "813-555-0145",
+          "email": null,
+          "context": "First point of contact for emergencies, handles calls during the day and billing/paperwork."
+        },
+        {
+          "name": "Tony",
+          "role": "Owner",
+          "phone": "813-555-0167",
+          "email": null,
+          "context": "Second point of contact for emergencies, currently receives all after-hours calls on his cell phone."
+        },
+        {
+          "name": "Pete",
+          "role": "Lead Installer",
+          "phone": "813-555-0189",
+          "email": null,
+          "context": "Last resort for critical emergency calls."
+        }
+      ],
+      "v2_value": [
+        {
+          "name": "Maria",
+          "role": "Receptionist",
+          "phone": "813-555-0145",
+          "email": null,
+          "context": "First point of contact for emergencies, handles calls during the day and billing/paperwork."
+        },
+        {
+          "name": "Tony",
+          "role": "Owner",
+          "phone": "813-555-0167",
+          "email": null,
+          "context": "Second point of contact for emergencies, currently receives all after-hours calls on his cell phone."
+        },
+        {
+          "name": "Pete",
+          "role": "Lead Installer",
+          "phone": "813-555-0189",
+          "email": null,
+          "context": "Last resort for critical emergency calls."
+        },
+        {
+          "name": "Maria",
+          "role": "Office Manager",
+          "phone": "813-555-0145",
+          "email": null,
+          "context": "Primary contact for all calls during business hours and Tier 1 for emergencies."
+        },
+        {
+          "name": "Tony Russo",
+          "role": "Owner",
+          "phone": "813-555-0167",
+          "email": "tony@coastalalarmsystems.com",
+          "context": "Tier 2 for emergencies and direct transfers for existing customers during business hours."
+        },
+        {
+          "name": "Pete",
+          "role": "Lead Installer",
+          "phone": "813-555-0189",
+          "email": null,
+          "context": "Tier 3 for emergencies, last resort."
+        },
+        {
+          "name": "General Inbox",
+          "role": null,
+          "phone": null,
+          "email": "service@coastalalarmsystems.com",
+          "context": "General service inquiries email."
+        }
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_supported",
+      "v1_value": [
+        "Commercial fire alarm system installation",
+        "Commercial fire alarm system inspection",
+        "Commercial security alarm systems",
+        "Access control systems (key cards, fobs, biometrics)",
+        "CCTV installation",
+        "Video surveillance installation",
+        "Alarm monitoring coordination",
+        "Low-voltage wiring",
+        "New installation quotes",
+        "Service visit scheduling"
+      ],
+      "v2_value": [
+        "Commercial fire alarm system installation",
+        "Commercial fire alarm system inspection",
+        "Commercial security alarm systems",
+        "Access control systems (key cards, fobs, biometrics)",
+        "CCTV installation",
+        "Video surveillance installation",
+        "Alarm monitoring coordination",
+        "Low-voltage wiring",
+        "New installation quotes",
+        "Service visit scheduling",
+        "Commercial fire alarm system design",
+        "Commercial fire alarm system repair",
+        "Commercial security alarm systems - intrusion detection",
+        "Commercial security alarm systems - installation",
+        "Commercial security alarm systems - service",
+        "Access control systems - key cards",
+        "Access control systems - fobs",
+        "Access control systems - biometric readers",
+        "Access control systems - electric strikes",
+        "Video surveillance maintenance",
+        "Video surveillance upgrades",
+        "Structured cabling",
+        "Emergency lighting inspection",
+        "Emergency lighting maintenance",
+        "Exit lighting inspection",
+        "Exit lighting maintenance",
+        "Video analytics setup - motion detection zones",
+        "Video analytics setup - license plate recognition"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "services_excluded",
+      "v1_value": [],
+      "v2_value": [
+        "Residential work",
+        "Home security systems",
+        "Electrical work beyond low-voltage (e.g., new panel, outlet installation)",
+        "Selling safes",
+        "Servicing safes",
+        "Locksmithing"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_definition",
+      "v1_value": [
+        "Fire alarm system malfunctions (especially false alarms disrupting business and unable to silence)",
+        "Alarm panel completely down leaving a building unprotected",
+        "Security system failures at high-risk facilities (e.g., banks, data centers)",
+        "Any call from monitoring partners about a critical system fault"
+      ],
+      "v2_value": [
+        "Fire alarm system malfunctions causing ongoing false alarms",
+        "Complete alarm panel failures (fire or security) leaving a building unprotected",
+        "Security system breaches at high-risk facilities (banks, data centers, government buildings)",
+        "Monitoring company calls about critical system faults (from ADT, Brinks, or any central station)",
+        "CCTV system failures at sites with active security concerns",
+        "Access control system lockouts (someone can't get into their building)",
+        "Any situation where a client explicitly says it's an emergency related to their life safety systems"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.order",
+      "v1_value": [
+        "Transfer to Maria's phone number",
+        "If Maria cannot be reached, transfer to Tony's phone number",
+        "If Tony cannot be reached, transfer to Pete's phone number"
+      ],
+      "v2_value": [
+        "Call Maria (Tier 1) for 30 seconds",
+        "If Maria is unreachable, call Tony (Tier 2) for 30 seconds",
+        "If Tony is unreachable, call Pete (Tier 3) for 30 seconds"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.timeout_seconds",
+      "v1_value": null,
+      "v2_value": 30,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "emergency_routing_rules.fallback_action",
+      "v1_value": null,
+      "v2_value": "Take a detailed message with urgency level and send text alerts to Maria, Tony, and Pete.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.action",
+      "v1_value": "Clara to answer calls, identify as non-emergency (e.g., requests for quotes on new installations or scheduling service visits), collect necessary information, and take a message for callback.",
+      "v2_value": "Clara to take a detailed message.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.info_to_collect",
+      "v1_value": [
+        "caller_name",
+        "caller_phone_number",
+        "reason_for_call"
+      ],
+      "v2_value": [
+        "name",
+        "company",
+        "phone_number",
+        "system_type",
+        "service_needed"
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.callback_timeframe",
+      "v1_value": "Next business day",
+      "v2_value": "Next business day by 10 AM",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "non_emergency_routing_rules.notes",
+      "v1_value": null,
+      "v2_value": "Most non-emergency calls are requests for quotes on new installations or requests to schedule service visits. These can wait until the next business day.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.during_hours_transfer",
+      "v1_value": null,
+      "v2_value": "Maria at 813-555-0145 (primary). Tony at 813-555-0167 (for specific requests or monitoring calls if Maria is unavailable).",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.transfer_timeout_seconds",
+      "v1_value": null,
+      "v2_value": 20,
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.transfer_fail_action",
+      "v1_value": null,
+      "v2_value": "Clara to handle the call, collect information, and Maria will call back.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "call_transfer_rules.notes",
+      "v1_value": [],
+      "v2_value": [
+        "For existing customers asking for Tony specifically, transfer to Tony's cell (813-555-0167).",
+        "For monitoring company calls, try transferring to Maria immediately. If she is unavailable, transfer to Tony."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "integration_constraints",
+      "v1_value": [
+        "Uses Connectwise Manage for ticketing and project management, but currently has no API integrations for it. Clara should not attempt direct integration with Connectwise Manage at this time."
+      ],
+      "v2_value": [
+        "Uses Connectwise Manage for ticketing and project management.",
+        "No API integration with Clara needed for Connectwise Manage.",
+        "Clara should never try to create tickets or access Connectwise.",
+        "Clara should NEVER ask for or record alarm codes, passwords, or access credentials. If a client has a code-related question, Clara should note it and route to Maria or Tony.",
+        "Service area is the Tampa Bay metropolitan area (Tampa, St. Petersburg, Clearwater, Brandon, and surrounding Hillsborough and Pinellas counties). Calls from outside this area (e.g., Miami, Jacksonville) cannot be serviced."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "after_hours_flow_summary",
+      "v1_value": "During after-hours (evenings, weekends, and holidays), Clara will first determine if the call is an emergency based on defined triggers (fire alarm malfunctions, alarm panel down, security system failures at high-risk facilities, or critical monitoring partner calls). If it's an emergency, Clara will follow the three-tier escalation protocol: first attempting to reach Maria (813-555-0145), then Tony (813-555-0167), and finally Pete (813-555-0189). If the call is not an emergency, Clara will inform the caller that the office is closed, collect their name, phone number, and reason for calling, and assure them that someone will call them back on the next business day. Weekends are specifically reserved for emergency callbacks only.",
+      "v2_value": "During after-hours, if a call is identified as an emergency based on the defined triggers, Clara will initiate a three-tier escalation process: first calling Maria (813-555-0145) for 30 seconds, then Tony (813-555-0167) for 30 seconds, and finally Pete (813-555-0189) for 30 seconds. If no one picks up across all three tiers, Clara will take a detailed message, including the urgency level, and send text alerts to all three contacts. For non-emergency calls after hours, Clara will take a message, collecting the caller's name, company, phone number, system type, and what service they need. The caller will be informed that Coastal Alarm Systems will follow up by 10 AM the next business day.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "office_hours_flow_summary",
+      "v1_value": "During office hours (Monday-Friday, 8 AM-5 PM Eastern Time), Clara will screen incoming calls. If the call is identified as an emergency (e.g., fire alarm malfunction, security system failure at high-risk facility, critical monitoring partner call), Clara will immediately initiate the emergency routing protocol: first attempting to reach Maria (813-555-0145), then Tony (813-555-0167), and finally Pete (813-555-0189). For non-emergency calls, such as requests for new installation quotes or scheduling service visits, Clara will collect the caller's name, phone number, and the nature of their inquiry, and take a message for Maria or other staff to address during business hours. Clara will handle monitoring company calls professionally, adapting conversation style as needed.",
+      "v2_value": "During business hours (Monday-Friday, 8 AM-5 PM ET), all incoming calls are initially transferred to Maria (813-555-0145). If Maria is busy and does not answer within 20 seconds, Clara will handle the call by collecting the necessary information, and Maria will call the client back. For existing customers who specifically ask to speak with Tony, Clara will transfer the call directly to Tony's cell (813-555-0167). Calls from monitoring companies are considered high priority; Clara will attempt to transfer these calls to Maria immediately, and if Maria is unavailable, the call will be transferred to Tony.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "special_rules",
+      "v1_value": [
+        "Coastal Alarm Systems does not work weekends unless it is an emergency callback."
+      ],
+      "v2_value": [
+        "Coastal Alarm Systems observes major holidays but maintains flexibility for high-priority clients requiring emergency service.",
+        "The business exclusively handles commercial work; no residential services are provided.",
+        "Electrical work is limited to low-voltage systems; services like new panel or outlet installation are not offered.",
+        "The company does not sell or service safes, nor do they provide locksmithing services.",
+        "Clara is strictly prohibited from asking for or recording any alarm codes, passwords, or access credentials due to security protocols. Any related inquiries should be noted and routed to Maria or Tony.",
+        "Coastal Alarm Systems operates within the Tampa Bay metropolitan area, including Tampa, St. Petersburg, Clearwater, Brandon, and surrounding Hillsborough and Pinellas counties. Calls from outside this service area will not be accommodated.",
+        "Coastal Alarm Systems is licensed in Florida for alarm contractor work under State License EF20001567, which Clara can reference if asked."
+      ],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "questions_or_unknowns",
+      "v1_value": [
+        "What is the desired timeout duration for each tier in the emergency escalation chain before moving to the next contact?",
+        "What is the fallback action if Pete (Tier 3) cannot be reached for an emergency?",
+        "What is the specific pricing for Clara's service?",
+        "Are there specific email addresses for Maria, Tony, or Pete for non-phone communication or notifications?",
+        "Should Clara send a summary of non-emergency messages via email or integrate with Connectwise Manage for message logging (despite no current API integration)?"
+      ],
+      "v2_value": [],
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "notes",
+      "v1_value": "Coastal Alarm Systems is a commercial security and fire alarm system installer and service provider based in Tampa, Florida. The company has been in business for 6 years and has grown from 5 to 18 employees in the last two years. They specialize in commercial fire alarm systems, security alarm systems, access control, CCTV, alarm monitoring coordination, and low-voltage wiring. Currently, their receptionist Maria handles calls during business hours, while after-hours calls are forwarded to the owner Tony's cell phone, which he finds disruptive. They use Connectwise Manage for ticketing and project management but do not have any API integrations. The pricing for Clara's software was not discussed in this transcript, only that a proposal would be sent. The onboarding call is scheduled for 'next week'. No mention of Jobber or QuickBooks usage. Tony's cell phone (813-555-0167) currently serves as the primary after-hours contact, which Clara will now manage through the emergency routing.",
+      "v2_value": "Updated with onboarding data. Operational details confirmed.",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "version",
+      "v1_value": null,
+      "v2_value": "v2",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v1_date",
+      "v1_value": null,
+      "v2_value": "2024-11-22",
+      "reason": "confirmed during onboarding call"
+    },
+    {
+      "field": "v2_date",
+      "v1_value": null,
+      "v2_value": "2024-11-25",
+      "reason": "confirmed during onboarding call"
+    }
+  ],
+  "fields_unchanged": [
+    "account_id",
+    "business_hours.days",
+    "business_hours.end_time",
+    "business_hours.seasonal_hours",
+    "business_hours.start_time",
+    "business_hours.timezone",
+    "company_name",
+    "emergency_routing_rules.escalation_chain",
+    "extraction_date",
+    "office_address",
+    "timezone"
+  ],
+  "questions_resolved": [
+    "What is the desired timeout duration for each tier in the emergency escalation chain before moving to the next contact?",
+    "What is the fallback action if Pete (Tier 3) cannot be reached for an emergency?",
+    "What is the specific pricing for Clara's service?",
+    "Are there specific email addresses for Maria, Tony, or Pete for non-phone communication or notifications?",
+    "Should Clara send a summary of non-emergency messages via email or integrate with Connectwise Manage for message logging (despite no current API integration)?"
+  ],
+  "questions_still_open": []
+}
